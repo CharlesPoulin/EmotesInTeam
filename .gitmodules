@@ -1,0 +1,7 @@
+[submodule "EmotesForTeam"]
+    path = EmotesForTeam
+    url = ../EmotesForTeam
+
+[submodule "ApiCardTeam"]
+    path = ApiCardTeam
+    url = ../ApiCardTeam

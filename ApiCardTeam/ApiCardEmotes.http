@@ -1,0 +1,6 @@
+@ApiCardEmotes_HostAddress = http://localhost:5168
+
+GET {{ApiCardEmotes_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
