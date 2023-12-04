@@ -1,0 +1,20 @@
+﻿@using EmotesForTeam.Services;
+
+@page "/main"
+@inject CardService CardService
+
+<CardGrid CurrentPage="@currentPage" />
+<Pagination CurrentPage="@currentPage" TotalPages="@totalPages" OnPageChanged="HandlePageChanged" />
+
+@code {
+
+    private int currentPage = 1;
+    private int totalPages = 10; // This should be calculated based on total data count
+
+    private async Task HandlePageChanged(int page)
+    {
+        currentPage = page;
+        // Trigger the CardGrid to refresh its data for the new page
+        // You might need to call a method in CardGrid to refresh its data
+    }
+}

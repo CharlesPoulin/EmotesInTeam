@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="katman_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1800 1344" style="enable-background:new 0 0 1800 1344;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#E3ECF5;}
+	.st1{fill:#FFFFFF;stroke:#C7C6C6;stroke-width:1.5251;stroke-miterlimit:10;}
+	.st2{fill:#020203;}
+	.st3{font-family:'Roboto-Bold';}
+	.st4{font-size:64.1575px;}
+	.st5{fill:#E95228;}
+	.st6{fill:#7EBA28;}
+	.st7{fill:#339FDA;}
+	.st8{fill:#FBB811;}
+	.st9{fill:#303030;}
+	.st10{fill:#FFFFFF;}
+</style>
+<rect class="st0" width="1800" height="1344"/>
+<g>
+	<g>
+		<path class="st1" d="M1582,596.2H218c-11.7,0-21.2-9.5-21.2-21.2l0-162.1c0-11.7,9.5-21.2,21.2-21.2h1364
+			c11.7,0,21.2,9.5,21.2,21.2v162.1C1603.2,586.7,1593.7,596.2,1582,596.2z"/>
+		<g>
+			<text transform="matrix(1 0 0 1 584.0518 515.5762)" class="st2 st3 st4">Sign in with Microsoft</text>
+		</g>
+		<g>
+			<path class="st5" d="M288.2,439.8h52.4v52.4h-52.4V439.8z"/>
+			<path class="st6" d="M346,439.8h52.4v52.4H346V439.8z"/>
+			<path class="st7" d="M288.2,497.7h52.4V550h-52.4V497.7z"/>
+			<path class="st8" d="M346,497.7h52.4V550H346V497.7z"/>
+		</g>
+	</g>
+	<g>
+		<path class="st9" d="M1468,952.3H332c-55,0-99.6-44.6-99.6-99.6v-5.2c0-55,44.6-99.6,99.6-99.6h1136c55,0,99.6,44.6,99.6,99.6v5.2
+			C1567.6,907.7,1523,952.3,1468,952.3z"/>
+		<g>
+			<text transform="matrix(1 0 0 1 624.8042 871.7549)" class="st10 st3 st4">Sign in with Microsoft</text>
+		</g>
+		<g>
+			<path class="st5" d="M319.4,796h52.4v52.4h-52.4V796z"/>
+			<path class="st6" d="M377.2,796h52.4v52.4h-52.4V796z"/>
+			<path class="st7" d="M319.4,853.8h52.4v52.4h-52.4V853.8z"/>
+			<path class="st8" d="M377.2,853.8h52.4v52.4h-52.4V853.8z"/>
+		</g>
+	</g>
+</g>
+</svg>
