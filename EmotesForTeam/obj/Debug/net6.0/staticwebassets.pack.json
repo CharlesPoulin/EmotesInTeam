@@ -1,39 +1,39 @@
 {
   "Files": [
     {
-      "Id": "D:\\GIT\\EmotesForTeam\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "D:\\GIT\\EmotesForTeam\\obj\\Debug\\net6.0\\compressed\\x2holanfg1.gz",
+      "Id": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\obj\\Debug\\net6.0\\compressed\\x2holanfg1.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "D:\\GIT\\EmotesForTeam\\wwwroot\\.eslintrc.json",
+      "Id": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\.eslintrc.json",
       "PackagePath": "staticwebassets\\.eslintrc.json"
     },
     {
-      "Id": "D:\\GIT\\EmotesForTeam\\wwwroot\\Images\\svg\\Sign in with Microsoft Button.svg",
+      "Id": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\Images\\svg\\Sign in with Microsoft Button.svg",
       "PackagePath": "staticwebassets\\Images\\svg\\Sign in with Microsoft Button.svg"
     },
     {
-      "Id": "D:\\GIT\\EmotesForTeam\\wwwroot\\css\\site.css",
+      "Id": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\GIT\\EmotesForTeam\\wwwroot\\css\\tailwind.css",
+      "Id": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\css\\tailwind.css",
       "PackagePath": "staticwebassets\\css\\tailwind.css"
     },
     {
-      "Id": "D:\\GIT\\EmotesForTeam\\wwwroot\\favicon.ico",
+      "Id": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\GIT\\EmotesForTeam\\wwwroot\\index.html",
+      "Id": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\GIT\\EmotesForTeam\\wwwroot\\sample-data\\weather.json",
+      "Id": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {

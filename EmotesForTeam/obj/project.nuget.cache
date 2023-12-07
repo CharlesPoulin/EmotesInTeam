@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cRIk+1b1pUHIUaI0rKKjM5dCcsWENwLZrtfZ2y2ctlLywzgQCXbSay3bqxY9uIDhAm2CkE5V5D4IwpZF6TrdGw==",
+  "dgSpecHash": "h2cMIqjewiufchwNl6eGzPBsL3K47kpzAc1OKY3eJTVLZqukHWZsoT0eD/gLClMgSDZmgtQVZ9ovkJU42Yl1yQ==",
   "success": true,
-  "projectFilePath": "D:\\GIT\\EmotesForTeam\\EmotesForTeam.csproj",
+  "projectFilePath": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\EmotesForTeam.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Charles\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.7\\microsoft.aspnetcore.authorization.6.0.7.nupkg.sha512",
     "C:\\Users\\Charles\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.7\\microsoft.aspnetcore.components.6.0.7.nupkg.sha512",

@@ -1,17 +1,13 @@
 ﻿@inherits EmotesForTeam.Components.CardGridBase
 
-@if (cards == null)
+@if (cards != null)
 {
-    <p>Loading...</p>
-}
-else
-{
-    <div class="grid grid-cols-6 gap-4">
+    <div class="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
         @foreach (var card in cards)
         {
-            <div class="border border-gray-200 p-4 text-center">
-                <img src="@card.ImageUrl" alt="@card.Title" class="mx-auto" />
-                <p class="mt-2 center">@card.Title</p>
+            <div class="border border-gray-200 p-4 text-center max-w-xs">
+                <img src="@card.ImageUrl" alt="@card.Title" class="mx-auto max-w-full h-auto" />
+                <p class="mt-2">@card.Title</p>
             </div>
         }
     </div>

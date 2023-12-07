@@ -1994,11 +1994,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GIT\\EmotesForTeam\\EmotesForTeam.csproj",
+      "projectUniqueName": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\EmotesForTeam.csproj",
       "projectName": "EmotesForTeam",
-      "projectPath": "D:\\GIT\\EmotesForTeam\\EmotesForTeam.csproj",
+      "projectPath": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\EmotesForTeam.csproj",
       "packagesPath": "C:\\Users\\Charles\\.nuget\\packages\\",
-      "outputPath": "D:\\GIT\\EmotesForTeam\\obj\\",
+      "outputPath": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

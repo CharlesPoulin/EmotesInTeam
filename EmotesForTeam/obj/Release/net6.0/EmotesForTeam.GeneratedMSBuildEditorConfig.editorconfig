@@ -13,55 +13,55 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = EmotesForTeam
 build_property.RootNamespace = EmotesForTeam
-build_property.ProjectDir = D:\GIT\EmotesForTeam\
+build_property.ProjectDir = D:\GIT\EmotesInTeam\EmotesForTeam\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\GIT\EmotesForTeam
+build_property.MSBuildProjectDirectory = D:\GIT\EmotesInTeam\EmotesForTeam
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/GIT/EmotesForTeam/App.razor]
+[D:/GIT/EmotesInTeam/EmotesForTeam/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GIT/EmotesForTeam/Pages/Components/CardGrid.razor]
+[D:/GIT/EmotesInTeam/EmotesForTeam/Pages/Components/CardGrid.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xDYXJkR3JpZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GIT/EmotesForTeam/Pages/Components/Pagination.razor]
+[D:/GIT/EmotesInTeam/EmotesForTeam/Pages/Components/Pagination.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xQYWdpbmF0aW9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GIT/EmotesForTeam/Pages/Counter.razor]
+[D:/GIT/EmotesInTeam/EmotesForTeam/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GIT/EmotesForTeam/Pages/Dashboard.razor]
+[D:/GIT/EmotesInTeam/EmotesForTeam/Pages/Dashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GIT/EmotesForTeam/Pages/FetchData.razor]
+[D:/GIT/EmotesInTeam/EmotesForTeam/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GIT/EmotesForTeam/Pages/Index.razor]
+[D:/GIT/EmotesInTeam/EmotesForTeam/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GIT/EmotesForTeam/Pages/MainPage.razor]
+[D:/GIT/EmotesInTeam/EmotesForTeam/Pages/MainPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpblBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GIT/EmotesForTeam/Shared/MainLayout.razor]
+[D:/GIT/EmotesInTeam/EmotesForTeam/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GIT/EmotesForTeam/Shared/NavMenu.razor]
+[D:/GIT/EmotesInTeam/EmotesForTeam/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GIT/EmotesForTeam/_Imports.razor]
+[D:/GIT/EmotesInTeam/EmotesForTeam/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

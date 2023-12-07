@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GIT\\ApiCardEmotes\\ApiCardEmotes.csproj": {}
+    "D:\\GIT\\EmotesInTeam\\ApiCardTeam\\ApiCardEmotes.csproj": {}
   },
   "projects": {
-    "D:\\GIT\\ApiCardEmotes\\ApiCardEmotes.csproj": {
+    "D:\\GIT\\EmotesInTeam\\ApiCardTeam\\ApiCardEmotes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GIT\\ApiCardEmotes\\ApiCardEmotes.csproj",
+        "projectUniqueName": "D:\\GIT\\EmotesInTeam\\ApiCardTeam\\ApiCardEmotes.csproj",
         "projectName": "ApiCardEmotes",
-        "projectPath": "D:\\GIT\\ApiCardEmotes\\ApiCardEmotes.csproj",
+        "projectPath": "D:\\GIT\\EmotesInTeam\\ApiCardTeam\\ApiCardEmotes.csproj",
         "packagesPath": "C:\\Users\\Charles\\.nuget\\packages\\",
-        "outputPath": "D:\\GIT\\ApiCardEmotes\\obj\\",
+        "outputPath": "D:\\GIT\\EmotesInTeam\\ApiCardTeam\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
