@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\ApiCardTeam",
     "\\EmotesForTeam",
     "\\EmotesForTeam\\Pages"
   ],
-  "SelectedNode": "\\EmotesForTeam\\Pages\\Dashboard.razor",
+  "SelectedNode": "\\ApiCardTeam\\Card.cs",
   "PreviewInSolutionExplorer": false
 }
