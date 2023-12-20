@@ -8,10 +8,10 @@ builder.Services.AddSwaggerGen();
 // Add CORS configuration
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowBlazorOrigin", // Policy name
+    options.AddPolicy("AllowBlazorOrigin", //todoAPI
                       builder =>
                       {
-                          builder.WithOrigins("https://localhost:44398") // Blazor app's origin
+                          builder.WithOrigins("https://localhost:44398") //todoAPI
                                  .AllowAnyHeader()
                                  .AllowAnyMethod();
                       });
@@ -28,8 +28,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowBlazorOrigin"); // Use the correct policy name here
-
+app.UseCors("AllowBlazorOrigin"); //todoAPI
 app.UseAuthorization();
 
 app.MapControllers();

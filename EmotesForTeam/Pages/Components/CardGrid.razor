@@ -1,22 +1,64 @@
-﻿@inherits EmotesForTeam.Components.CardGridBase
+﻿@using EmotesForTeam.Model
+@using EmotesForTeam.Services
+@using Microsoft.AspNetCore.Components
 
-@if (cards != null)
+@inherits ComponentBase
+
+@if (cards != null && cards.Any())
 {
-    <div class="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 	">
+    <div class="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
         @foreach (var card in cards)
         {
-            <div class="border border-black p-4 text-center text-white max-w-xs bg-gray-800	">
+            <div class="p-4 text-center text-white max-w-xs bg-gray-800 rounded-lg shadow-2xl">
                 <img src="@card.ImageUrl" alt="@card.Title" class="mx-auto max-w-full h-auto" />
                 <p class="mt-2">@card.Title</p>
             </div>
         }
     </div>
+
+
 }
-
+<div class="flex justify-between mt-4">
+    <button @onclick="PreviousPage" class="btn-previous bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" disabled="@IsFirstPage">Previous</button>
+    <button @onclick="NextPage" class="btn-next bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" disabled="@IsLastPage">Next</button>
+</div>
 @code {
-    [Parameter]
-    public int CurrentPage { get; set; }
+    [Inject]
+    protected CardService? CardService { get; set; }
 
-    [Parameter]
-    public EventCallback<int> OnPageChanged { get; set; }
+    private List<Card>? cards;
+
+    private const int PageSize = 30;
+    private int CurrentPage { get; set; } = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadCards();
+    }
+
+    private async Task LoadCards()
+    {
+        if (CardService != null)
+        {
+            cards = await CardService.GetCardsAsync(CurrentPage, PageSize);
+        }
+    }
+
+    private async Task NextPage()
+    {
+        CurrentPage++;
+        await LoadCards();
+    }
+
+    private async Task PreviousPage()
+    {
+        if (CurrentPage > 1)
+        {
+            CurrentPage--;
+            await LoadCards();
+        }
+    }
+
+    private bool IsFirstPage => CurrentPage <= 1;
+    private bool IsLastPage => cards != null && cards.Count < PageSize;
 }

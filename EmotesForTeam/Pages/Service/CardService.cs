@@ -2,6 +2,8 @@
 using EmotesForTeam.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Net.Http;
+using System;
 
 namespace EmotesForTeam.Services
 {
@@ -16,9 +18,29 @@ namespace EmotesForTeam.Services
 
         public async Task<List<Card>> GetCardsAsync(int page, int size)
         {
-            // Replace with your actual API endpoint
-            var response = await _httpClient.GetFromJsonAsync<List<Card>>($"api/Cards?page={page}&size={size}");
-            return response ?? new List<Card>();
+            try
+            {
+                // Replace with your actual API endpoint
+                var response = await _httpClient.GetAsync($"api/Cards?page={page}&size={size}");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var cards = await response.Content.ReadFromJsonAsync<List<Card>>();
+                    return cards ?? new List<Card>();
+                }
+                else
+                {
+                    // Handle non-success status code. Log it, return an empty list, or throw an exception as needed.
+                    Console.WriteLine($"API call failed: {response.StatusCode}");
+                    return new List<Card>();
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                // Handle HttpRequestException. Log it, return an empty list, or throw an exception as needed.
+                Console.WriteLine($"Exception during API call: {ex.Message}");
+                return new List<Card>();
+            }
         }
     }
 }
