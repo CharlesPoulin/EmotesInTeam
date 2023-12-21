@@ -6,13 +6,40 @@
 
 @if (cards != null && cards.Any())
 {
-    <div class="grid  sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+    <div class="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-100 gap-y-4">
         @foreach (var card in cards)
         {
-            <div class="p-4 text-center text-white max-w-xs bg-gray-800 rounded-lg shadow-2xl">
+            <div class="w-[202px] h-[259px] relative bg-white rounded-[6.7px] shadow-xl">
+                <div class="w-[77px] h-7 left-[110px] top-[207px] absolute bg-blue-600 rounded-[6.7px]"></div>
+                <div class="w-[77px] h-7 left-[16px] top-[207px] absolute">
+                    <div class="w-[77px] h-3 left-0 top-0 absolute bg-indigo-400 rounded-[13.4px]"></div>
+                    <div class="w-[77px] h-3 left-0 top-[16px] absolute bg-indigo-900 rounded-[13.4px]"></div>
+                </div>
+                <div class="w-6 h-6 right-5 top-[24px] absolute justify-center items-center inline-flex bg-blue-600">
+                    <div class="w-6 h-6 relative"></div>
+                </div>
+
+
+                <div class="absolute top-[172px] w-full flex justify-center">
+                    <p class="text-blue-600 font-medium">@card.Title</p>
+                </div>
+
+                <div class="w-[77px] h-7 left-[16px] top-[16px] absolute">
+                    <div class="w-[77px] h-3 left-0 top-0 absolute bg-indigo-400 rounded-[13.4px]"></div>
+                    <div class="w-[77px] h-3 left-0 top-[16px] absolute bg-indigo-900 rounded-[13.4px]"></div>
+                </div>
+                <div class="w-[200px] h-[200px] absolute justify-center items-center inline-flex">
+                    <img src="@card.ImageUrl" alt="@card.Title" class="mx-auto max-w-full h-auto" />
+                </div>
+
+            </div>
+
+
+
+@*             <div class="p-4 text-center text-white max-w-xs bg-gray-800 rounded-lg shadow-2xl">
                 <img src="@card.ImageUrl" alt="@card.Title" class="mx-auto max-w-full h-auto" />
                 <p class="mt-2">@card.Title</p>
-            </div>
+            </div> *@
         }
     </div>
 

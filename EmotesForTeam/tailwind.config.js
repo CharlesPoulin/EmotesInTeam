@@ -2,19 +2,28 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  content: ['./**/*.html', './**/*.razor'],
-  theme: {
-      extend: {},
-      colors: {
-          // Build your palette here
-          transparent: 'transparent',
-          current: 'currentColor',
-          gray: colors.trueGray,
-          red: colors.red,
-          blue: colors.sky,
-          yellow: colors.amber,
-      },
-  },
-  plugins: [],
+    content: ['./**/*.html', './**/*.razor'],
+    theme: {
+        extend: {
+            fontFamily: {
+                'sans': ['Roboto', 'sans-serif'],
+            },
+            colors: {
+                neutral: {
+                    100: '#f5f5f5',
+                },
+                indigo: {
+                    50: '#eef2ff',
+                },
+            },
+        },
+        colors: {
+            ...colors,
+            transparent: 'transparent',
+            current: 'currentColor',
+        },
+    },
+    plugins: [],
+    mode: 'jit',
+    purge: ['./**/*.html', './**/*.razor'],
 }
-

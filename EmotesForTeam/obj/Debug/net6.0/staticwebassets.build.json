@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1IrIZBaBvR7RkEIn8WE1SMLX+Ks+A8HZKTXsJ4Zup6U=",
+  "Hash": "z3jnjbKub0nVOd72fxclQrPDPj/TOr3lzPDm45NUoNE=",
   "Source": "EmotesForTeam",
   "BasePath": "/",
   "Mode": "Root",
@@ -7712,6 +7712,25 @@
       "OriginalItemSpec": "wwwroot\\.eslintrc.json"
     },
     {
+      "Identity": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\css\\output.css",
+      "SourceId": "EmotesForTeam",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/output.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\output.css"
+    },
+    {
       "Identity": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\css\\site.css",
       "SourceId": "EmotesForTeam",
       "SourceType": "Discovered",
@@ -7767,6 +7786,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\Images\\svg\\heart.svg",
+      "SourceId": "EmotesForTeam",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "Images/svg/heart.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\svg\\heart.svg"
     },
     {
       "Identity": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\Images\\svg\\Sign in with Microsoft Button.svg",
