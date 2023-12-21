@@ -1,12 +1,24 @@
-﻿namespace ApiCardEmotes
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace ApiCardEmotes
 {
     public class Card
     {
-        public required int Id { get; set; }
-        public required string ImageUrl { get; set; }
-        public required string Title { get; set; }
-        public  required string Owner { get; set; }
+        // Use ObjectId for the Id property and mark it as the BSON identifier
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+
+        [BsonRequired]
+        public byte[] ImageData { get; set; }
+
+        [BsonRequired]
+        public string Title { get; set; }
+
+        [BsonRequired]
+        public string Owner { get; set; }
+
         // Add other properties as necessary
     }
-
 }

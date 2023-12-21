@@ -3,8 +3,9 @@
     "",
     "\\ApiCardTeam",
     "\\EmotesForTeam",
-    "\\EmotesForTeam\\Pages"
+    "\\EmotesForTeam\\Pages",
+    "\\EmotesForTeam\\Shared"
   ],
-  "SelectedNode": "\\ApiCardTeam\\Card.cs",
+  "SelectedNode": "\\EmotesForTeam\\Shared\\MainLayout.razor",
   "PreviewInSolutionExplorer": false
 }

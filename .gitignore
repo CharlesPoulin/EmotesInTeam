@@ -119,3 +119,15 @@ EmotesForTeam/obj/Debug/net6.0/EmotesForTeam.sourcelink.json
 EmotesForTeam/obj/Debug/net6.0/EmotesForTeam.pdb
 *.editorconfig
 *.txt
+*.cache
+*.cache
+*.pdb
+*.exe
+ApiCardTeam/bin/Debug/net8.0/ApiCardEmotes.exe
+*.sqlite
+.vs/EmotesInTeam/v17/.wsuo
+*.bin
+*.v2
+*.v2
+ApiCardTeam/.vs/ApiCardEmotes/v17/.suo
+*.pdb

@@ -7,16 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<MongoDbContext>();
-builder.Services.AddSingleton<CardService>();
 
-
-//// Register MongoDB context
-//builder.Services.AddSingleton<MongoDbContext>(sp =>
-//{
-//    var configuration = sp.GetService<IConfiguration>();
-//    return new MongoDbContext(configuration);
-//});
+// Register MongoDB context
+builder.Services.AddSingleton<MongoDbContext>();  // This line registers MongoDbContext
+builder.Services.AddSingleton<CardService>();    // Assuming CardService uses MongoDbContext
 
 // Add CORS configuration
 builder.Services.AddCors(options =>
