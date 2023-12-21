@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z3jnjbKub0nVOd72fxclQrPDPj/TOr3lzPDm45NUoNE=",
+  "Hash": "CU98JLPUeWPMmQS0Rz0ozRM7VDHivqFmHQbMIRkGnfk=",
   "Source": "EmotesForTeam",
   "BasePath": "/",
   "Mode": "Root",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Charles\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.7\\build\\net6.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "SourceId": "EmotesForTeam",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Charles\\.nuget\\packages\\blazored.localstorage\\4.4.0\\lib\\net6.0\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\bin\\Debug\\net6.0\\wwwroot\\_framework\\dotnet.6.0.25.8xfrc70qlj.js",
@@ -5755,6 +5774,25 @@
       "OriginalItemSpec": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Security.AccessControl.dll"
     },
     {
+      "Identity": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\obj\\Debug\\net6.0\\compressed\\gg5io15a21.gz",
+      "SourceId": "EmotesForTeam",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll"
+    },
+    {
       "Identity": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\obj\\Debug\\net6.0\\compressed\\gkiz5bpdjp.gz",
       "SourceId": "EmotesForTeam",
       "SourceType": "Computed",
@@ -7788,12 +7826,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\Images\\svg\\heart.svg",
+      "Identity": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\Images\\svg\\heart-empty.svg",
       "SourceId": "EmotesForTeam",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Images/svg/heart.svg",
+      "RelativePath": "Images/svg/heart-empty.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -7804,7 +7842,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\svg\\heart.svg"
+      "OriginalItemSpec": "wwwroot\\Images\\svg\\heart-empty.svg"
+    },
+    {
+      "Identity": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\Images\\svg\\heart-full.svg",
+      "SourceId": "EmotesForTeam",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "Images/svg/heart-full.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\svg\\heart-full.svg"
     },
     {
       "Identity": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\Images\\svg\\Sign in with Microsoft Button.svg",

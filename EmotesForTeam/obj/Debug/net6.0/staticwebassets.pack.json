@@ -17,8 +17,12 @@
       "PackagePath": "staticwebassets\\Images\\svg\\Sign in with Microsoft Button.svg"
     },
     {
-      "Id": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\Images\\svg\\heart.svg",
-      "PackagePath": "staticwebassets\\Images\\svg\\heart.svg"
+      "Id": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\Images\\svg\\heart-empty.svg",
+      "PackagePath": "staticwebassets\\Images\\svg\\heart-empty.svg"
+    },
+    {
+      "Id": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\Images\\svg\\heart-full.svg",
+      "PackagePath": "staticwebassets\\Images\\svg\\heart-full.svg"
     },
     {
       "Id": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\wwwroot\\css\\output.css",

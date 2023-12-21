@@ -139,3 +139,13 @@ ApiCardTeam/.vs/ApiCardEmotes/v17/.suo
 *.pdb
 *.dll
 EmotesForTeam/.vs/TeamEmotes/v17/.suo
+*.json
+EmotesForTeam/bin/Debug/net6.0/wwwroot/_framework/EmotesForTeam.dll
+EmotesForTeam/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json.gz
+EmotesForTeam/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json
+EmotesForTeam/bin/Debug/net6.0/EmotesForTeam.staticwebassets.runtime.json
+EmotesForTeam/obj/Debug/net6.0/compressed/sgp0xd2lwq.gz
+EmotesForTeam/obj/Debug/net6.0/compressed/uji5zuu4c3.gz
+EmotesForTeam/obj/Debug/net6.0/EmotesForTeam.AssemblyInfoInputs.cache
+*.cache
+EmotesForTeam/obj/Debug/net6.0/EmotesForTeam.assets.cache

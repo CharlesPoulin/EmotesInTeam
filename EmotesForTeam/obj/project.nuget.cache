@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "h2cMIqjewiufchwNl6eGzPBsL3K47kpzAc1OKY3eJTVLZqukHWZsoT0eD/gLClMgSDZmgtQVZ9ovkJU42Yl1yQ==",
+  "dgSpecHash": "KpUA6D2P3Ig+tfW24VCvaNBcYP/GINmkC+2O/JICZziFG1gbJZefiWXZjboyi5T0wnelKnYDLvYIs7x04ylyDQ==",
   "success": true,
   "projectFilePath": "D:\\GIT\\EmotesInTeam\\EmotesForTeam\\EmotesForTeam.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Charles\\.nuget\\packages\\blazored.localstorage\\4.4.0\\blazored.localstorage.4.4.0.nupkg.sha512",
     "C:\\Users\\Charles\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.7\\microsoft.aspnetcore.authorization.6.0.7.nupkg.sha512",
     "C:\\Users\\Charles\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.7\\microsoft.aspnetcore.components.6.0.7.nupkg.sha512",
     "C:\\Users\\Charles\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.7\\microsoft.aspnetcore.components.analyzers.6.0.7.nupkg.sha512",

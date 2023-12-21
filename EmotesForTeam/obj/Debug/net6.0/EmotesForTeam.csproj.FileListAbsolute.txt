@@ -1644,3 +1644,7 @@ D:\GIT\EmotesInTeam\EmotesForTeam\obj\Debug\net6.0\EmotesForTeam.dll
 D:\GIT\EmotesInTeam\EmotesForTeam\obj\Debug\net6.0\refint\EmotesForTeam.dll
 D:\GIT\EmotesInTeam\EmotesForTeam\obj\Debug\net6.0\EmotesForTeam.pdb
 D:\GIT\EmotesInTeam\EmotesForTeam\obj\Debug\net6.0\ref\EmotesForTeam.dll
+D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
+D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
+D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\Blazored.LocalStorage.dll
+D:\GIT\EmotesInTeam\EmotesForTeam\obj\Debug\net6.0\compressed\gg5io15a21.gz
