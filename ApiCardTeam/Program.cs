@@ -1,17 +1,28 @@
+using ApiCardEmotes;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<MongoDbContext>();
+
+
+//// Register MongoDB context
+//builder.Services.AddSingleton<MongoDbContext>(sp =>
+//{
+//    var configuration = sp.GetService<IConfiguration>();
+//    return new MongoDbContext(configuration);
+//});
 
 // Add CORS configuration
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowBlazorOrigin", //todoAPI
+    options.AddPolicy("AllowBlazorOrigin",
                       builder =>
                       {
-                          builder.WithOrigins("https://localhost:44398") //todoAPI
+                          builder.WithOrigins("https://localhost:44398")
                                  .AllowAnyHeader()
                                  .AllowAnyMethod();
                       });
@@ -28,7 +39,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowBlazorOrigin"); //todoAPI
+app.UseCors("AllowBlazorOrigin");
 app.UseAuthorization();
 
 app.MapControllers();

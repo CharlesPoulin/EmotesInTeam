@@ -14,7 +14,6 @@
 	<ItemGroup>
 	  <Content Include="Pages\Model\Cards.cs" />
 	  <Content Include="Pages\Components\CardGrid.razor.cs" />
-	  <Content Include="Pages\Components\Pagination.razor.cs" />
 	  <Content Include="Pages\Service\CardService.cs" />
 	</ItemGroup>
 

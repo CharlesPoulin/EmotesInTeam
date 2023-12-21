@@ -108,3 +108,7 @@ EmotesForTeam/obj/Debug/net6.0/EmotesForTeam.sourcelink.json
 *.bin
 *.cs
 *.gz
+*.dll
+*.dll
+*.gz
+*.cache
