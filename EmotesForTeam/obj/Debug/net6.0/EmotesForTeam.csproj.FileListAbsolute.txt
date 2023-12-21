@@ -821,10 +821,13 @@ D:\GIT\EmotesForTeam\obj\Debug\net6.0\EmotesForTeam.dll
 D:\GIT\EmotesForTeam\obj\Debug\net6.0\refint\EmotesForTeam.dll
 D:\GIT\EmotesForTeam\obj\Debug\net6.0\EmotesForTeam.pdb
 D:\GIT\EmotesForTeam\obj\Debug\net6.0\ref\EmotesForTeam.dll
+D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\dotnet.6.0.25.8xfrc70qlj.js
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\dotnet.timezones.blat
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\dotnet.wasm
+D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\EmotesForTeam.dll
+D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\EmotesForTeam.pdb
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\icudt_CJK.dat
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\icudt_EFIGS.dat
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\icudt_no_CJK.dat
@@ -1061,6 +1064,7 @@ D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Xml
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Runtime.Loader.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\Microsoft.JSInterop.WebAssembly.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Diagnostics.TraceSource.dll.gz
+D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\EmotesForTeam.pdb.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Reflection.Emit.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Runtime.Serialization.Formatters.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Threading.dll.gz
@@ -1179,6 +1183,7 @@ D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Net
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Web.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Diagnostics.Process.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Xml.dll.gz
+D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\EmotesForTeam.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Security.Cryptography.Primitives.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.IO.Compression.Brotli.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Linq.Queryable.dll.gz
@@ -1186,6 +1191,7 @@ D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Tra
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Collections.NonGeneric.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Linq.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.IO.FileSystem.AccessControl.dll.gz
+D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Options.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Data.Common.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Globalization.Extensions.dll.gz
@@ -1215,12 +1221,6 @@ D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Tex
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.Reflection.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.IO.FileSystem.dll.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\System.ComponentModel.DataAnnotations.dll.gz
-D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
-D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\EmotesForTeam.dll
-D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\EmotesForTeam.pdb
-D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\EmotesForTeam.pdb.gz
-D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\EmotesForTeam.dll.gz
-D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json.gz
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\package-lock.json
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\package.json
 D:\GIT\EmotesInTeam\EmotesForTeam\bin\Debug\net6.0\EmotesForTeam.staticwebassets.runtime.json

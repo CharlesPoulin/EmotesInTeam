@@ -1,24 +1,24 @@
 ﻿using ApiCardEmotes;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Driver;
-using System.Buffers;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 [ApiController]
 [Route("api/[controller]")]
 public class CardsController : ControllerBase
 {
-    private readonly MongoDbContext _context;
+    private readonly CardService _cardService;
 
-    public CardsController(MongoDbContext context)
+    public CardsController(CardService cardService)
     {
-        _context = context;
+        _cardService = cardService;
     }
 
+    // Update this method to include pagination
     [HttpGet]
-    public async Task<ActionResult<List<Card>>> Get(int page, int size)
+    public async Task<ActionResult<List<Card>>> GetAllCards([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
     {
-        var pagedCards = await _context.Cards.Find(_ => true).Skip((page - 1) * size).Limit(size).ToListAsync();
-        return Ok(pagedCards);
+        var cards = await _cardService.GetPaginatedCardsAsync(page, pageSize);
+        return Ok(cards);
     }
 }
-
