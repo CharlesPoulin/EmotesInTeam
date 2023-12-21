@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiCardEmotes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20e2e555ba38f4855db14ed81c9228f14e5cda68")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiCardEmotes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiCardEmotes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,50 +1,440 @@
 ﻿@page "/"
 
-<PageTitle>Home Page</PageTitle>
-
-<MudText Typo="Typo.h3" GutterBottom="true">Hello, world!</MudText>
-<MudText Class="mb-8">HomePage!</MudText>
-<MudAlert Severity="Severity.Normal">You can find documentation and examples on our website here: <MudLink Href="https://mudblazor.com" Typo="Typo.body2" Color="Color.Inherit"><b>www.mudblazor.com</b></MudLink></MudAlert>
-<div class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
-    <div class="flex flex-1 justify-between sm:hidden">
-        <a href="#" class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
-        <a href="#" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
+<div className="w-[1440px] h-[2724px] flex-col justify-center items-start inline-flex">
+    <div className="w-[1440px] h-[124px] relative bg-white border border-slate-300 border-opacity-40 flex-col justify-start items-start flex">
+        <div className="w-[492px] h-11 relative">
+            <div className="w-[492px] h-11 left-0 top-0 absolute opacity-80 bg-white rounded-[70px] border border-slate-300" />
+            <div className="w-[15px] h-[15px] left-[30px] top-[14px] absolute bg-indigo-400 rounded-[20px]" />
+            <div className="w-[115.38px] h-[15px] left-[59px] top-[14px] absolute bg-indigo-50 rounded-[20px]" />
+        </div>
+        <div className="w-11 h-11 relative">
+            <div className="w-11 h-11 left-0 top-0 absolute opacity-80 bg-white rounded-[90px] border border-slate-300" />
+            <div className="w-6 h-6 left-[10px] top-[10px] absolute justify-center items-center inline-flex">
+                <div className="w-6 h-6 relative">
+                </div>
+            </div>
+        </div>
+        <div className="w-11 h-11 relative">
+            <div className="w-11 h-11 left-0 top-0 absolute opacity-80 bg-white rounded-[90px] border border-slate-300" />
+            <div className="w-6 h-6 left-[10px] top-[10px] absolute justify-center items-center inline-flex">
+                <div className="w-6 h-6 relative">
+                </div>
+            </div>
+        </div>
+        <div className="w-11 h-11 relative">
+            <div className="w-11 h-11 left-0 top-0 absolute opacity-80 bg-white rounded-[90px] border border-slate-300" />
+            <div className="w-6 h-6 left-[10px] top-[10px] absolute justify-center items-center inline-flex">
+                <div className="w-6 h-6 relative">
+                </div>
+            </div>
+        </div>
+        <div className="w-11 h-11 relative">
+            <div className="w-11 h-11 left-0 top-0 absolute opacity-80 bg-white rounded-[90px] border border-slate-300" />
+            <div className="w-6 h-6 left-[10px] top-[10px] absolute justify-center items-center inline-flex">
+                <div className="w-6 h-6 relative">
+                </div>
+            </div>
+        </div>
+        <div className="w-[116px] h-4 bg-indigo-400 rounded-[20px]" />
     </div>
-    <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
-        <div>
-            <p class="text-sm text-gray-700">
-                Showing
-                <span class="font-medium">1</span>
-                to
-                <span class="font-medium">10</span>
-                of
-                <span class="font-medium">97</span>
-                results
-            </p>
+    <div className="w-[1440px] h-[2120px] relative bg-neutral-100 flex-col justify-start items-start flex">
+        <div className="w-[640px] h-[360px] pl-80 pr-[260px] bg-white rounded-[10px] justify-end items-center inline-flex">
+            <div className="w-[60px] self-stretch justify-center items-center inline-flex">
+                <div className="w-[60px] h-[60px] relative">
+                </div>
+            </div>
         </div>
-        <div>
-            <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
-                <a href="#" class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
-                    <span class="sr-only">Previous</span>
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-                <!-- Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" -->
-                <a href="1" aria-current="page" class="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">1</a>
-                <a href="2" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>
-                <a href="3" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
-                <span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0">...</span>
-                <a href="7" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
-                <a href="8" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
-                <a href="9" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>
-                <a href="10" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
-                    <span class="sr-only">Next</span>
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </nav>
+        <div className="w-[640px] h-[360px] pl-80 pr-[260px] bg-white rounded-[10px] justify-end items-center inline-flex">
+            <div className="w-[60px] self-stretch justify-center items-center inline-flex">
+                <div className="w-[60px] h-[60px] relative">
+                </div>
+            </div>
         </div>
+        <div className="w-[582px] h-[136px] relative rounded-[10px]">
+            <div className="w-[582px] h-[136px] left-0 top-0 absolute bg-white rounded-[10px]" />
+            <div className="w-[116px] h-4 left-[24px] top-[24px] absolute bg-indigo-400 rounded-[20px]" />
+            <div className="w-[116px] h-10 left-[24px] top-[66px] absolute">
+                <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+            </div>
+            <div className="w-[116px] h-10 left-[442px] top-[66px] absolute">
+                <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+            </div>
+            <div className="w-[116px] h-10 left-[233px] top-[66px] absolute">
+                <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+            </div>
+        </div>
+        <div className="w-[582px] h-[136px] relative rounded-[10px]">
+            <div className="w-[582px] h-[136px] left-0 top-0 absolute bg-white rounded-[10px]" />
+            <div className="w-[116px] h-4 left-[24px] top-[24px] absolute bg-indigo-400 rounded-[20px]" />
+            <div className="w-[116px] h-10 left-[24px] top-[66px] absolute">
+                <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+            </div>
+            <div className="w-[116px] h-10 left-[233px] top-[66px] absolute">
+                <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+            </div>
+            <div className="w-[116px] h-10 left-[442px] top-[66px] absolute">
+                <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+            </div>
+        </div>
+        <div className="origin-top-left -rotate-90 w-[60px] h-[60px] relative">
+            <div className="w-[42px] h-[60px] left-0 top-0 absolute origin-top-left -rotate-90 bg-blue-600 bg-opacity-25 rounded-[10px] blur-2xl" />
+            <div className="w-[60px] h-[60px] left-0 top-0 absolute origin-top-left -rotate-90 bg-blue-600 rounded-[10px]" />
+        </div>
+        <div className="flex-col justify-start items-start gap-5 inline-flex">
+            <div className="justify-start items-start gap-[1076px] inline-flex">
+                <div className="w-[132px] h-11 px-5 rounded justify-center items-center gap-2 flex">
+                    <div className="w-[92px] h-6 text-center text-slate-400 text-base font-semibold font-['Plus Jakarta Sans']">Popular Car</div>
+                </div>
+                <div className="w-[104px] h-11 px-5 rounded justify-center items-center gap-2 flex">
+                    <div className="w-16 h-6 text-center text-blue-600 text-base font-semibold font-['Plus Jakarta Sans']">View All</div>
+                </div>
+            </div>
+            <div className="justify-start items-start gap-8 inline-flex">
+                <div className="w-[304px] h-[388px] relative bg-white rounded-[10px]">
+                    <div className="w-[116px] h-10 left-[164px] top-[310px] absolute bg-blue-600 rounded-[10px]" />
+                    <div className="w-[116px] h-10 left-[24px] top-[310px] absolute">
+                        <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                        <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                    </div>
+                    <div className="w-64 h-4 left-[24px] top-[258px] absolute">
+                        <div className="w-[68px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        <div className="w-[68px] h-4 left-[94px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        <div className="w-[68px] h-4 left-[188px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                    </div>
+                    <div className="w-6 h-6 left-[256px] top-[24px] absolute justify-center items-center inline-flex">
+                        <div className="w-6 h-6 relative">
+                        </div>
+                    </div>
+                    <div className="w-[116px] h-10 left-[24px] top-[24px] absolute">
+                        <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                        <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                    </div>
+                    <div className="w-[60px] h-[60px] left-[122px] top-[131px] absolute justify-center items-center inline-flex">
+                        <div className="w-[60px] h-[60px] relative">
+                        </div>
+                    </div>
+                </div>
+                <div className="w-[304px] h-[388px] relative bg-white rounded-[10px]">
+                    <div className="w-[116px] h-10 left-[164px] top-[310px] absolute bg-blue-600 rounded-[10px]" />
+                    <div className="w-[116px] h-10 left-[24px] top-[310px] absolute">
+                        <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                        <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                    </div>
+                    <div className="w-64 h-4 left-[24px] top-[258px] absolute">
+                        <div className="w-[68px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        <div className="w-[68px] h-4 left-[94px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        <div className="w-[68px] h-4 left-[188px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                    </div>
+                    <div className="w-6 h-6 left-[256px] top-[24px] absolute justify-center items-center inline-flex">
+                        <div className="w-6 h-6 relative">
+                        </div>
+                    </div>
+                    <div className="w-[116px] h-10 left-[24px] top-[24px] absolute">
+                        <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                        <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                    </div>
+                    <div className="w-[60px] h-[60px] left-[122px] top-[131px] absolute justify-center items-center inline-flex">
+                        <div className="w-[60px] h-[60px] relative">
+                        </div>
+                    </div>
+                </div>
+                <div className="w-[304px] h-[388px] relative bg-white rounded-[10px]">
+                    <div className="w-[116px] h-10 left-[164px] top-[310px] absolute bg-blue-600 rounded-[10px]" />
+                    <div className="w-[116px] h-10 left-[24px] top-[310px] absolute">
+                        <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                        <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                    </div>
+                    <div className="w-64 h-4 left-[24px] top-[258px] absolute">
+                        <div className="w-[68px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        <div className="w-[68px] h-4 left-[94px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        <div className="w-[68px] h-4 left-[188px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                    </div>
+                    <div className="w-6 h-6 left-[256px] top-[24px] absolute justify-center items-center inline-flex">
+                        <div className="w-6 h-6 relative">
+                        </div>
+                    </div>
+                    <div className="w-[116px] h-10 left-[24px] top-[24px] absolute">
+                        <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                        <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                    </div>
+                    <div className="w-[60px] h-[60px] left-[122px] top-[131px] absolute justify-center items-center inline-flex">
+                        <div className="w-[60px] h-[60px] relative">
+                        </div>
+                    </div>
+                </div>
+                <div className="w-[304px] h-[388px] relative bg-white rounded-[10px]">
+                    <div className="w-[116px] h-10 left-[164px] top-[310px] absolute bg-blue-600 rounded-[10px]" />
+                    <div className="w-[116px] h-10 left-[24px] top-[310px] absolute">
+                        <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                        <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                    </div>
+                    <div className="w-64 h-4 left-[24px] top-[258px] absolute">
+                        <div className="w-[68px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        <div className="w-[68px] h-4 left-[94px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        <div className="w-[68px] h-4 left-[188px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                    </div>
+                    <div className="w-6 h-6 left-[256px] top-[24px] absolute justify-center items-center inline-flex">
+                        <div className="w-6 h-6 relative">
+                        </div>
+                    </div>
+                    <div className="w-[116px] h-10 left-[24px] top-[24px] absolute">
+                        <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                        <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                    </div>
+                    <div className="w-[60px] h-[60px] left-[122px] top-[131px] absolute justify-center items-center inline-flex">
+                        <div className="w-[60px] h-[60px] relative">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="flex-col justify-start items-start gap-5 inline-flex">
+            <div className="w-[196px] h-11 px-5 rounded justify-center items-center gap-2 inline-flex">
+                <div className="w-[156px] h-6 text-center text-slate-400 text-base font-semibold font-['Plus Jakarta Sans']">Recomendation Car</div>
+            </div>
+            <div className="flex-col justify-start items-start gap-8 flex">
+                <div className="justify-start items-start gap-8 inline-flex">
+                    <div className="w-[304px] h-[388px] relative bg-white rounded-[10px]">
+                        <div className="w-[116px] h-10 left-[164px] top-[310px] absolute bg-blue-600 rounded-[10px]" />
+                        <div className="w-[116px] h-10 left-[24px] top-[310px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-64 h-4 left-[24px] top-[258px] absolute">
+                            <div className="w-[68px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[94px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[188px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-6 h-6 left-[256px] top-[24px] absolute justify-center items-center inline-flex">
+                            <div className="w-6 h-6 relative">
+                            </div>
+                        </div>
+                        <div className="w-[116px] h-10 left-[24px] top-[24px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-[60px] h-[60px] left-[122px] top-[131px] absolute justify-center items-center inline-flex">
+                            <div className="w-[60px] h-[60px] relative">
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-[304px] h-[388px] relative bg-white rounded-[10px]">
+                        <div className="w-[116px] h-10 left-[164px] top-[310px] absolute bg-blue-600 rounded-[10px]" />
+                        <div className="w-[116px] h-10 left-[24px] top-[310px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-64 h-4 left-[24px] top-[258px] absolute">
+                            <div className="w-[68px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[94px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[188px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-6 h-6 left-[256px] top-[24px] absolute justify-center items-center inline-flex">
+                            <div className="w-6 h-6 relative">
+                            </div>
+                        </div>
+                        <div className="w-[116px] h-10 left-[24px] top-[24px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-[60px] h-[60px] left-[122px] top-[131px] absolute justify-center items-center inline-flex">
+                            <div className="w-[60px] h-[60px] relative">
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-[304px] h-[388px] relative bg-white rounded-[10px]">
+                        <div className="w-[116px] h-10 left-[164px] top-[310px] absolute bg-blue-600 rounded-[10px]" />
+                        <div className="w-[116px] h-10 left-[24px] top-[310px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-64 h-4 left-[24px] top-[258px] absolute">
+                            <div className="w-[68px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[94px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[188px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-6 h-6 left-[256px] top-[24px] absolute justify-center items-center inline-flex">
+                            <div className="w-6 h-6 relative">
+                            </div>
+                        </div>
+                        <div className="w-[116px] h-10 left-[24px] top-[24px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-[60px] h-[60px] left-[122px] top-[131px] absolute justify-center items-center inline-flex">
+                            <div className="w-[60px] h-[60px] relative">
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-[304px] h-[388px] relative bg-white rounded-[10px]">
+                        <div className="w-[116px] h-10 left-[164px] top-[310px] absolute bg-blue-600 rounded-[10px]" />
+                        <div className="w-[116px] h-10 left-[24px] top-[310px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-64 h-4 left-[24px] top-[258px] absolute">
+                            <div className="w-[68px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[94px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[188px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-6 h-6 left-[256px] top-[24px] absolute justify-center items-center inline-flex">
+                            <div className="w-6 h-6 relative">
+                            </div>
+                        </div>
+                        <div className="w-[116px] h-10 left-[24px] top-[24px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-[60px] h-[60px] left-[122px] top-[131px] absolute justify-center items-center inline-flex">
+                            <div className="w-[60px] h-[60px] relative">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="justify-start items-start gap-8 inline-flex">
+                    <div className="w-[304px] h-[388px] relative bg-white rounded-[10px]">
+                        <div className="w-[116px] h-10 left-[164px] top-[310px] absolute bg-blue-600 rounded-[10px]" />
+                        <div className="w-[116px] h-10 left-[24px] top-[310px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-64 h-4 left-[24px] top-[258px] absolute">
+                            <div className="w-[68px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[94px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[188px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-6 h-6 left-[256px] top-[24px] absolute justify-center items-center inline-flex">
+                            <div className="w-6 h-6 relative">
+                            </div>
+                        </div>
+                        <div className="w-[116px] h-10 left-[24px] top-[24px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-[60px] h-[60px] left-[122px] top-[131px] absolute justify-center items-center inline-flex">
+                            <div className="w-[60px] h-[60px] relative">
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-[304px] h-[388px] relative bg-white rounded-[10px]">
+                        <div className="w-[116px] h-10 left-[164px] top-[310px] absolute bg-blue-600 rounded-[10px]" />
+                        <div className="w-[116px] h-10 left-[24px] top-[310px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-64 h-4 left-[24px] top-[258px] absolute">
+                            <div className="w-[68px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[94px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[188px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-6 h-6 left-[256px] top-[24px] absolute justify-center items-center inline-flex">
+                            <div className="w-6 h-6 relative">
+                            </div>
+                        </div>
+                        <div className="w-[116px] h-10 left-[24px] top-[24px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-[60px] h-[60px] left-[122px] top-[131px] absolute justify-center items-center inline-flex">
+                            <div className="w-[60px] h-[60px] relative">
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-[304px] h-[388px] relative bg-white rounded-[10px]">
+                        <div className="w-[116px] h-10 left-[164px] top-[310px] absolute bg-blue-600 rounded-[10px]" />
+                        <div className="w-[116px] h-10 left-[24px] top-[310px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-64 h-4 left-[24px] top-[258px] absolute">
+                            <div className="w-[68px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[94px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[188px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-6 h-6 left-[256px] top-[24px] absolute justify-center items-center inline-flex">
+                            <div className="w-6 h-6 relative">
+                            </div>
+                        </div>
+                        <div className="w-[116px] h-10 left-[24px] top-[24px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-[60px] h-[60px] left-[122px] top-[131px] absolute justify-center items-center inline-flex">
+                            <div className="w-[60px] h-[60px] relative">
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-[304px] h-[388px] relative bg-white rounded-[10px]">
+                        <div className="w-[116px] h-10 left-[164px] top-[310px] absolute bg-blue-600 rounded-[10px]" />
+                        <div className="w-[116px] h-10 left-[24px] top-[310px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-64 h-4 left-[24px] top-[258px] absolute">
+                            <div className="w-[68px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[94px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                            <div className="w-[68px] h-4 left-[188px] top-0 absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-6 h-6 left-[256px] top-[24px] absolute justify-center items-center inline-flex">
+                            <div className="w-6 h-6 relative">
+                            </div>
+                        </div>
+                        <div className="w-[116px] h-10 left-[24px] top-[24px] absolute">
+                            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+                            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+                        </div>
+                        <div className="w-[60px] h-[60px] left-[122px] top-[131px] absolute justify-center items-center inline-flex">
+                            <div className="w-[60px] h-[60px] relative">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="w-[116px] h-10 bg-blue-600 rounded-[10px]" />
+        <div className="w-[140px] h-6 text-right text-slate-400 text-sm font-bold font-['Plus Jakarta Sans']">120 Car</div>
+    </div>
+    <div className="w-[1440px] h-[480px] relative bg-white flex-col justify-start items-start flex">
+        <div className="w-[116px] h-10 relative">
+            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+            <div className="w-[116px] h-4 left-0 top-[24px] absolute bg-indigo-50 rounded-[20px]" />
+        </div>
+        <div className="w-[116px] h-[148px] relative">
+            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+            <div className="w-[116px] h-[100px] left-0 top-[48px] absolute">
+                <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[28px] absolute bg-indigo-50 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[56px] absolute bg-indigo-50 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[84px] absolute bg-indigo-50 rounded-[20px]" />
+            </div>
+        </div>
+        <div className="w-[116px] h-[148px] relative">
+            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+            <div className="w-[116px] h-[100px] left-0 top-[48px] absolute">
+                <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[28px] absolute bg-indigo-50 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[56px] absolute bg-indigo-50 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[84px] absolute bg-indigo-50 rounded-[20px]" />
+            </div>
+        </div>
+        <div className="w-[116px] h-[148px] relative">
+            <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-400 rounded-[20px]" />
+            <div className="w-[116px] h-[100px] left-0 top-[48px] absolute">
+                <div className="w-[116px] h-4 left-0 top-0 absolute bg-indigo-50 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[28px] absolute bg-indigo-50 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[56px] absolute bg-indigo-50 rounded-[20px]" />
+                <div className="w-[116px] h-4 left-0 top-[84px] absolute bg-indigo-50 rounded-[20px]" />
+            </div>
+        </div>
+        <div className="w-[1320px] h-[0px] origin-top-left -rotate-180 border border-neutral-900 border-opacity-20"></div>
+        <div className="w-[116px] h-4 bg-indigo-400 rounded-[20px]" />
+        <div className="w-[116px] h-4 bg-indigo-50 rounded-[20px]" />
+        <div className="w-[116px] h-4 bg-indigo-50 rounded-[20px]" />
     </div>
 </div>

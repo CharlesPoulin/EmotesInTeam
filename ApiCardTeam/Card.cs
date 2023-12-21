@@ -11,7 +11,7 @@ namespace ApiCardEmotes
         public string Id { get; set; }
 
         [BsonRequired]
-        public byte[] ImageData { get; set; }
+        public string ImageUrl { get; set; }
 
         [BsonRequired]
         public string Title { get; set; }

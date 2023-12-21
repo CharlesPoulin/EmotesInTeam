@@ -16,7 +16,7 @@ public class CardsController : ControllerBase
 
     // Update this method to include pagination
     [HttpGet]
-    public async Task<ActionResult<List<Card>>> GetAllCards([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
+    public async Task<ActionResult<List<Card>>> GetAllCards([FromQuery] int page = 1, [FromQuery] int pageSize = 30)
     {
         var cards = await _cardService.GetPaginatedCardsAsync(page, pageSize);
         return Ok(cards);

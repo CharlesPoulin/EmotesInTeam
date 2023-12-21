@@ -131,3 +131,10 @@ ApiCardTeam/bin/Debug/net8.0/ApiCardEmotes.exe
 *.v2
 ApiCardTeam/.vs/ApiCardEmotes/v17/.suo
 *.pdb
+*.dll
+*.cache
+*.cache
+*.sqlite
+*.dll
+*.pdb
+*.dll
