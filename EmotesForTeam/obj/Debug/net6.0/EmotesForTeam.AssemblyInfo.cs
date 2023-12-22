@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmotesForTeam")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02e22753bce407351122463fb7ac3b40fb6f26d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97666ea564e52507cbf42141deb279d87f12641a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmotesForTeam")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmotesForTeam")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

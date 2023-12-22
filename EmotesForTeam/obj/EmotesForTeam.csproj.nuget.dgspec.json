@@ -76,6 +76,10 @@
               "version": "[8.0.0, )",
               "autoReferenced": true
             },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.23.1, )"
+            },
             "MudBlazor": {
               "target": "Package",
               "version": "[6.0.13, )"

@@ -1,7 +1,7 @@
 {
   "entryAssembly": "EmotesForTeam",
   "resources": {
-    "hash": "sha256-LdmB0gAUDRWl9T0H9sfnlEAqVXoCxci8IRDtwC50n2w=",
+    "hash": "sha256-HUZFQ4D0x/vWbwH0FBdz+aeD6k090iIe6oZNfIAdtqg=",
     "runtime": {
       "dotnet.6.0.25.8xfrc70qlj.js": "sha256-1jUGCCSGH9JWhkqbHdQk8JBjBI8K/VC63En5zlypVps=",
       "dotnet.timezones.blat": "sha256-KsGUR9nqtXb3Hy6IrNlnc1HoSS+AFlsXTX9rq4oChtA=",
@@ -11,7 +11,10 @@
       "icudt_no_CJK.dat": "sha256-OxylFgLJlFqixsj+nLxYVsv5iZLvfIKMpLf9hrWaChA="
     },
     "assembly": {
+      "AWSSDK.Core.dll": "sha256-+UpImU00F39wFSt+inE9WLBTUExntLG77AT9xvHPZXI=",
+      "AWSSDK.SecurityToken.dll": "sha256-P3TkEvrhuiq4K1HnQHdk6MNzra8x4cvSdJ1hHfOwlbw=",
       "Blazored.LocalStorage.dll": "sha256-w2vMoqbIgF9UyzKqfDFXjqgg7IsGRHDvzb6DcyaPW6s=",
+      "DnsClient.dll": "sha256-pqqUK/nxzj7PtSwp8HNcVX1ULYXRKP+ym0hhLNYpjsk=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-hSXzdQFPBtfxBs3B2TFaykHyx2Mgqh21anN/Gx+VKSo=",
       "Microsoft.AspNetCore.Components.dll": "sha256-BikLdQx36rYsSVwqNFVsuDwW4Soedlr/SnAFSy5tjW8=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-92y2h3G1nlPZuHI7ZX3WI+lOUF3ipefJgi4gLswtgeQ=",
@@ -34,8 +37,15 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-jOmoWSfsdQexH/6QCA56gR1RMEqeix2iDDUBWbpAOQI=",
       "Microsoft.JSInterop.dll": "sha256-UMN0MIhXy6iiBoCH7TVNO7airH6YRx+Dtq3QNJ0b0rM=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-TNVKFxQm+ZgKzHK5rCOcAC9sMNh87Kz6N3h5jS7B/cg=",
+      "MongoDB.Bson.dll": "sha256-pBWfxJW72gm8M5A3S8yMrwp5w/dabb33ERTsoDQ/acc=",
+      "MongoDB.Driver.dll": "sha256-3TX6n/MTjXPW1ZC9KEWTUYt1Lg6O2axvMYmyGILj47w=",
+      "MongoDB.Driver.Core.dll": "sha256-Bot23jU6R9/AIrvVfosP4XmHkDEFI6FH8AUlOZS6FlQ=",
+      "MongoDB.Libmongocrypt.dll": "sha256-IsPXriMV5TfCIY1hD++zBa4JW2rlJcDtUctDebdFnSo=",
       "MudBlazor.dll": "sha256-YVtA+TtFIMp8sS2n+/R6+/IYJYD6/0BHn0aZQDHb6JM=",
+      "SharpCompress.dll": "sha256-g6OkB2E3tHVhjYz074TwY/qKeHk14HgEWYjivSizy68=",
+      "Snappier.dll": "sha256-7+iUMbT8Ae8amaAJEgiQ8U/p6OQqf5zp4oy2zEDxxis=",
       "System.IO.Pipelines.dll": "sha256-6+E55JXedimdw1c1bDtVg4K7XuWjVWVTifH8QpfzXSY=",
+      "ZstdSharp.dll": "sha256-j4LD25bGPV6S8vNyW9Vi7bc9gDMiyeMC3A7i0ycMnb8=",
       "Microsoft.CSharp.dll": "sha256-ql0JuqQqMvWlkrz+ktRnb+sgR+RBuabSpT82YicO+Dc=",
       "Microsoft.VisualBasic.Core.dll": "sha256-yjDGnYBu6yp61MAe+i7sbIj/AgPhLbBm5dleSxMPjDo=",
       "Microsoft.VisualBasic.dll": "sha256-m6TH5rs0haOMSWvUpe3f7naMYyalexbVkIbVq1amiUw=",
@@ -202,10 +212,10 @@
       "mscorlib.dll": "sha256-veli+XvWHzkA3s4t4DKI+XiyNMpfHQjiO002+ExANkU=",
       "netstandard.dll": "sha256-O9JhHo5KqxkmwmapuxuhG/iMRV7RHcrCDO9z+yv+8yI=",
       "System.Private.CoreLib.dll": "sha256-6rKu8tPdUGsvbSpesoNMVzbx7bNqPRMPV34eI7vSYaQ=",
-      "EmotesForTeam.dll": "sha256-L52cpEATatu409A1f/fOuCkDxu4qnchGcbIBP3sTJSw="
+      "EmotesForTeam.dll": "sha256-E6dnq3j7vjU97ogZppTvJvQczFX9pOa1Momp+Opt8aw="
     },
     "pdb": {
-      "EmotesForTeam.pdb": "sha256-xrkjRGapa/qKx1Wje9ihOspePgZgpyw1V/z1bTCGtto="
+      "EmotesForTeam.pdb": "sha256-WN2gicDHI4sZzKXy9+0ivlsc4X8U8DvOqDcK3AZ45aw="
     },
     "runtimeAssets": {
       "dotnet.wasm": {
