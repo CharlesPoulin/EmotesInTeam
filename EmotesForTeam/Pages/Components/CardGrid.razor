@@ -1,17 +1,15 @@
 ﻿@using EmotesForTeam.Model
 @using EmotesForTeam.Services
 @using Microsoft.AspNetCore.Components
-@using EmotesForTeam.Model
-
-@inherits ComponentBase
+@inherits CardGridBase
 
 @if (cardViewModels != null && cardViewModels.Any())
 {
     <div class="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-100 gap-y-4">
-        @foreach (var cardViewModel in cardViewModels) // Corrected from cardViewModel to cardViewModels
+        @foreach (var cardViewModel in cardViewModels)
         {
             <div class="w-[202px] h-[259px] relative bg-white rounded-[6.7px] shadow-xl">
-                <button style="cursor: pointer;" @onclick="() => ToggleFavorite(cardViewModel)">
+                <button style="cursor: pointer; position: absolute; right: 10px; top: 10px; z-index: 1;" @onclick="() => ToggleFavorite(cardViewModel)">
                     <img src="@GetHeartImageUrl(cardViewModel.IsFavorite)" alt="Heart" />
                 </button>
 
@@ -34,92 +32,12 @@
                     <img src="@cardViewModel.Card.ImageUrl" alt="@cardViewModel.Card.Title" class="self-center max-w-auto h-auto" />
                 </div>
 
-
             </div>
-
         }
     </div>
-
-
 }
+
 <div class="flex justify-between mt-4">
     <button @onclick="PreviousPage" class="btn-previous bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" disabled="@IsFirstPage">Previous</button>
     <button @onclick="NextPage" class="btn-next bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" disabled="@IsLastPage">Next</button>
 </div>
-
-
-@code {
-    [Inject]
-    protected CardService? CardService { get; set; }
-    @inject Blazored.LocalStorage.ILocalStorageService LocalStorage
-
-    private List<Card>? cards;
-    private List<CardViewModel> cardViewModels;
-
-    private const int PageSize = 30;
-    private int CurrentPage { get; set; } = 1;
-
-    protected override async Task OnInitializedAsync()
-    {
-        await LoadCards();
-        await LoadFavorites();
-    }
-
-    private async Task LoadCards()
-    {
-        if (CardService != null)
-        {
-            cards = await CardService.GetCardsAsync(CurrentPage, PageSize);
-            cardViewModels = cards.Select(card => new CardViewModel { Card = card }).ToList();
-        }
-    }
-
-    private async Task NextPage()
-    {
-        CurrentPage++;
-        await LoadCards();
-    }
-
-    private async Task PreviousPage()
-    {
-        if (CurrentPage > 1)
-        {
-            CurrentPage--;
-            await LoadCards();
-        }
-    }
-
-    private bool IsFirstPage => CurrentPage <= 1;
-    private bool IsLastPage => cards != null && cards.Count < PageSize;
-
-    private bool isFavorite = false;
-
-    private async Task ToggleFavorite(CardViewModel cardViewModel)
-    {
-        cardViewModel.IsFavorite = !cardViewModel.IsFavorite;
-
-        // Save the updated list to local storage
-        await LocalStorage.SetItemAsync("favorites", cardViewModels);
-    }
-
-    private async Task LoadFavorites()
-    {
-        var storedFavorites = await LocalStorage.GetItemAsync<List<CardViewModel>>("favorites");
-        if (storedFavorites != null)
-        {
-            // Update the favorite state based on local storage
-            foreach (var cardViewModel in cardViewModels)
-            {
-                var storedFavorite = storedFavorites.FirstOrDefault(c => c.Card.Id == cardViewModel.Card.Id);
-                if (storedFavorite != null)
-                {
-                    cardViewModel.IsFavorite = storedFavorite.IsFavorite;
-                }
-            }
-        }
-    }
-    private string GetHeartImageUrl(bool isFavorite)
-    {
-        return isFavorite ? "/Images/svg/heart-full.svg" : "/Images/svg/heart-empty.svg";
-    }
-}

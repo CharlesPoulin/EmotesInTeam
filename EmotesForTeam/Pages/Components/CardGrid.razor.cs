@@ -1,50 +1,82 @@
-﻿// Update these using statements to match the actual namespaces of Card and CardService
-using EmotesForTeam.Model; // Adjusted namespace for the Card model
-using EmotesForTeam.Services;    // Assuming CardService is in this namespace
+﻿using EmotesForTeam.Model;
+using EmotesForTeam.Services;
 using Microsoft.AspNetCore.Components;
+using Blazored.LocalStorage;
+using System.Linq;
 
-namespace EmotesForTeam.Components
+namespace EmotesForTeam.Pages.Components
 {
-    public class CardGridBase : ComponentBase
+    public partial class CardGridBase : ComponentBase
     {
         [Inject]
-        protected CardService? CardService { get; set; }
+        public CardService? CardService { get; set; }
+        [Inject]
+        public ILocalStorageService LocalStorage { get; set; }
 
-        protected List<Card>? cards;
-        protected const int PageSize = 30; // 6x5 grid
+        public List<Card>? cards;
+        public List<CardViewModel> cardViewModels;
 
-        protected int CurrentPage { get; set; } = 1;
+        private const int PageSize = 30;
+        public int CurrentPage { get; set; } = 1;
 
-        // Declare the OnPageChanged event callback
-        [Parameter]
-        public EventCallback<int> OnPageChanged { get; set; }
+        protected override async Task OnInitializedAsync()
+        {
+            await LoadCards();
+            await LoadFavorites();
+        }
 
+        public async Task LoadCards()
+        {
+            if (CardService != null)
+            {
+                cards = await CardService.GetCardsAsync(CurrentPage, PageSize);
+                cardViewModels = cards.Select(card => new CardViewModel { Card = card }).ToList();
+            }
+        }
 
-        protected async Task NextPage()
+        public async Task NextPage()
         {
             CurrentPage++;
             await LoadCards();
-            _ = OnPageChanged.InvokeAsync(CurrentPage); // Notify the parent component (if needed)
         }
 
-        protected async Task PreviousPage()
+        public async Task PreviousPage()
         {
             if (CurrentPage > 1)
             {
                 CurrentPage--;
                 await LoadCards();
-                _ = OnPageChanged.InvokeAsync(CurrentPage); // Notify the parent component (if needed)
             }
         }
 
-        protected override async Task OnParametersSetAsync()
+        public bool IsFirstPage => CurrentPage <= 1;
+        public bool IsLastPage => cards != null && cards.Count < PageSize;
+
+        public async Task ToggleFavorite(CardViewModel cardViewModel)
         {
-            await LoadCards();
+            cardViewModel.IsFavorite = !cardViewModel.IsFavorite;
+            await LocalStorage.SetItemAsync("favorites", cardViewModels);
         }
 
-        private async Task LoadCards()
+        public async Task LoadFavorites()
         {
-            cards = await CardService.GetCardsAsync(CurrentPage, PageSize);
+            var storedFavorites = await LocalStorage.GetItemAsync<List<CardViewModel>>("favorites");
+            if (storedFavorites != null)
+            {
+                foreach (var cardViewModel in cardViewModels)
+                {
+                    var storedFavorite = storedFavorites.FirstOrDefault(c => c.Card.Id == cardViewModel.Card.Id);
+                    if (storedFavorite != null)
+                    {
+                        cardViewModel.IsFavorite = storedFavorite.IsFavorite;
+                    }
+                }
+            }
+        }
+
+        public string GetHeartImageUrl(bool isFavorite)
+        {
+            return isFavorite ? "/Images/svg/heart-full.svg" : "/Images/svg/heart-empty.svg";
         }
     }
 }
