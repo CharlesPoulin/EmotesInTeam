@@ -30,16 +30,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xDYXJkR3JpZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GIT/EmotesInTeam/EmotesForTeam/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/GIT/EmotesInTeam/EmotesForTeam/Pages/Dashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/GIT/EmotesInTeam/EmotesForTeam/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/GIT/EmotesInTeam/EmotesForTeam/Pages/Index.razor]

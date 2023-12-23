@@ -8,30 +8,22 @@
     <div class="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-100 gap-y-4">
         @foreach (var cardViewModel in cardViewModels)
         {
-            <div class="w-[202px] h-[259px] relative bg-white rounded-[6.7px] shadow-xl">
+            <div class="w-[202px] h-[259px] relative bg-white rounded-[6.7px] shadow-xl card-hover-effect">
                 <button style="cursor: pointer; position: absolute; right: 10px; top: 10px; z-index: 1;" @onclick="() => ToggleFavorite(cardViewModel)">
                     <img src="@GetHeartImageUrl(cardViewModel.IsFavorite)" alt="Heart" />
                 </button>
-
                 <button class="w-[77px] h-7 left-[110px] top-[207px] absolute bg-blue-600 rounded-[6.7px] font-bold text-white hover:bg-gray-700 flex justify-center items-center">
                     Quick Add
                 </button>
-
                 <button class="w-[77px] h-7 left-[16px] top-[207px] absolute bg-indigo-900 rounded-[13.4px] text-white text-xs font-medium flex justify-center items-center">
                     Manage List
                 </button>
-
-
-
-
                 <div class="absolute top-[172px] w-full flex justify-center">
                     <p class="text-blue-600 font-medium">@cardViewModel.Card.Title</p>
                 </div>
-
                 <div class="w-[200px] h-[200px] absolute flex justify-center items-center">
                     <img src="@cardViewModel.Card.ImageUrl" alt="@cardViewModel.Card.Title" class="self-center max-w-auto h-auto" />
                 </div>
-
             </div>
         }
     </div>
