@@ -8,7 +8,7 @@
     <div class="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-100 gap-y-4">
         @foreach (var cardViewModel in cardViewModels)
         {
-            <div class="w-[202px] h-[259px] relative bg-white rounded-[6.7px] shadow-xl card-hover-effect">
+            <div class="w-[202px] h-[259px] relative bg-white rounded-[6.7px] shadow-xl card-hover-effect cursor-pointer">
                 <button style="cursor: pointer; position: absolute; right: 10px; top: 10px; z-index: 1;" @onclick="() => ToggleFavorite(cardViewModel)">
                     <img src="@GetHeartImageUrl(cardViewModel.IsFavorite)" alt="Heart" />
                 </button>
