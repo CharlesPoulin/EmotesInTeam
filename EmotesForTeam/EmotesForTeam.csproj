@@ -1,29 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
-
-	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
-		<Nullable>enable</Nullable>
-		<ImplicitUsings>enable</ImplicitUsings>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
-	<ItemGroup>
-	  <Compile Remove="Pages\Pagination.razor.cs" />
-	  <Compile Remove="Pages\Service\CardGrid.razor.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Include="Pages\Model\Cards.cs" />
-	  <Content Include="Pages\Components\CardGrid.razor.cs" />
-	  <Content Include="Pages\Service\CardService.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Blazored.LocalStorage" Version="4.4.0" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.7" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.7" PrivateAssets="all" />
-		<PackageReference Include="MongoDB.Driver" Version="2.23.1" />
-		<PackageReference Include="MudBlazor" Version="6.0.13" />
-	</ItemGroup>
-
-
+  <ItemGroup>
+    <Compile Remove="Pages\Pagination.razor.cs" />
+    <Compile Remove="Pages\Service\CardGrid.razor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pages\Model\Cards.cs" />
+    <Content Include="Pages\Components\CardGrid.razor.cs" />
+    <Content Include="Pages\Service\CardService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Blazored.LocalStorage" Version="4.4.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.23.1" />
+    <PackageReference Include="MudBlazor" Version="6.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" />
+  </ItemGroup>
 </Project>
