@@ -1,15 +1,22 @@
 ﻿@page "/cardDetail/{CardId}"
 @using EmotesForTeam.Model
-@inject NavigationManager NavigationManager
 @inherits CardGridBase
 
 @if (cardViewModel != null)
 {
-    <div class="card-detail-container">
-        <h2>@cardViewModel.Card.Title</h2>
-        <img src="@cardViewModel.Card.ImageUrl" alt="@cardViewModel.Card.Title" class="img-large"/>
-        <p>@cardViewModel.Card.Owner</p>
+    
+    <div class="w-[569px] h-[554px] bg-white rounded-[50px] shadow flex justify-center items-center flex-col">
+        <div class="w-[362px] h-[454px] flex flex-col items-center">
+            <img class="w-[362px] h-[362px] rounded-[25px] object-cover" src="@cardViewModel.Card.ImageUrl" alt="@cardViewModel.Card.Title" />
+            <div class="w-[350px] mt-4 text-center">
+                <span class="text-zinc-500 text-xl font-normal" style="font-family: 'Google Sans', sans-serif;">@cardViewModel.Card.Title</span>
+            </div>
+            <div class="w-[120px] h-0.5 mt-2 bg-zinc-100 rounded-[1px]"></div>
+            <span class="text-cyan-700 text-xl font-bold" style="font-family: 'Google Sans', sans-serif;">@cardViewModel.Card.Owner</span>
+
+        </div>
     </div>
+
 }
 else
 {
