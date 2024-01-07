@@ -1,0 +1,37 @@
+﻿@page "/cardDetail/{CardId}"
+@using EmotesForTeam.Model
+@inject NavigationManager NavigationManager
+@inherits CardGridBase
+
+@if (cardViewModel != null)
+{
+    <div class="card-detail-container">
+        <h2>@cardViewModel.Card.Title</h2>
+        <img src="@cardViewModel.Card.ImageUrl" alt="@cardViewModel.Card.Title" class="img-large"/>
+        <p>@cardViewModel.Card.Owner</p>
+    </div>
+}
+else
+{
+    <p>Loading...</p>
+} 
+
+@code {
+    [Parameter]
+    public string CardId { get; set; }
+
+    private CardViewModel cardViewModel;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var card = await CardService.GetCardById(CardId); // This returns a Card object
+        if(card != null)
+        {
+            // Convert or map Card to CardViewModel
+            cardViewModel = new CardViewModel
+            {
+                Card = card, // Assign the card to the ViewModel
+            };
+        }
+    }
+}

@@ -2,6 +2,8 @@
 using EmotesForTeam.Services;
 using Microsoft.AspNetCore.Components;
 using Blazored.LocalStorage;
+
+
 using System.Linq;
 
 namespace EmotesForTeam.Pages.Components
@@ -12,6 +14,9 @@ namespace EmotesForTeam.Pages.Components
         public CardService? CardService { get; set; }
         [Inject]
         public ILocalStorageService LocalStorage { get; set; }
+        
+        [Inject]
+        public NavigationManager NavigationManager { get; set; }
 
         public List<Card>? cards;
         public List<CardViewModel> cardViewModels;
@@ -32,6 +37,11 @@ namespace EmotesForTeam.Pages.Components
                 cards = await CardService.GetCardsAsync(CurrentPage, PageSize);
                 cardViewModels = cards.Select(card => new CardViewModel { Card = card }).ToList();
             }
+        }
+        
+        public void NavigateToCardDetail(string cardId)
+        {
+            NavigationManager.NavigateTo($"/cardDetail/{cardId}");
         }
 
         public async Task NextPage()

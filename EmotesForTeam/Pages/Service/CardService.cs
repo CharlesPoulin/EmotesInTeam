@@ -42,5 +42,34 @@ namespace EmotesForTeam.Services
                 return new List<Card>();
             }
         }
+        
+        public async Task<Card> GetCardById(string cardId)
+        {
+            try
+            {
+                // Replace with your actual API endpoint
+                var response = await _httpClient.GetAsync($"api/Cards/{cardId}");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var card = await response.Content.ReadFromJsonAsync<Card>();
+                    return card;
+                }
+                else
+                {
+                    // Handle non-success status code. Log it, or throw an exception as needed.
+                    Console.WriteLine($"API call failed: {response.StatusCode}");
+                    return null; // or handle as needed
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                // Handle HttpRequestException. Log it, or throw an exception as needed.
+                Console.WriteLine($"Exception during API call: {ex.Message}");
+                return null; // or handle as needed
+            }
+
+        }
+        
     }
 }

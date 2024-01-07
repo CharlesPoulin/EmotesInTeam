@@ -21,4 +21,15 @@ public class CardsController : ControllerBase
         var cards = await _cardService.GetPaginatedCardsAsync(page, pageSize);
         return Ok(cards);
     }
+    
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Card>> GetCardById(string id)
+    {
+        var card = await _cardService.GetCardById(id);
+        if (card == null)
+        {
+            return NotFound();  // Return 404 if the card doesn't exist
+        }
+        return Ok(card);  // Return 200 with the card data
+    }
 }
