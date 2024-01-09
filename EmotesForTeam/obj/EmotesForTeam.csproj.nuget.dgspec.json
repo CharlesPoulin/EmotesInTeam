@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.Authentication.WebAssembly.Msal": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",

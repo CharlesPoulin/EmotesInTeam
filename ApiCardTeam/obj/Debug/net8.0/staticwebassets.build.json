@@ -1,11 +1,50 @@
 {
   "Version": 1,
-  "Hash": "ntKgYiBY9YIQiFAAWWO7HfCl35JuICR0sLQahm3vdTg=",
+  "Hash": "6+UWV7Hhn+gDjM+ODiSkU+eqzHEwlK7D6hUZXmktSLo=",
   "Source": "ApiCardEmotes",
   "BasePath": "_content/ApiCardEmotes",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Charles\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.1\\staticwebassets\\AuthenticationService.js",
+      "SourceId": "Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Charles\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.1\\staticwebassets\\",
+      "BasePath": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "RelativePath": "AuthenticationService.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Charles\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.1\\staticwebassets\\AuthenticationService.js"
+    },
+    {
+      "Identity": "C:\\Users\\Charles\\.nuget\\packages\\microsoft.authentication.webassembly.msal\\8.0.1\\staticwebassets\\AuthenticationService.js",
+      "SourceId": "Microsoft.Authentication.WebAssembly.Msal",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Charles\\.nuget\\packages\\microsoft.authentication.webassembly.msal\\8.0.1\\staticwebassets\\",
+      "BasePath": "_content/Microsoft.Authentication.WebAssembly.Msal",
+      "RelativePath": "AuthenticationService.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Charles\\.nuget\\packages\\microsoft.authentication.webassembly.msal\\8.0.1\\staticwebassets\\AuthenticationService.js"
+    }
+  ]
 }
