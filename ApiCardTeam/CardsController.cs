@@ -28,8 +28,8 @@ public class CardsController : ControllerBase
         var card = await _cardService.GetCardById(id);
         if (card == null)
         {
-            return NotFound();
+            return NotFound();  // Return 404 if the card doesn't exist
         }
-        return Ok(card);
+        return Ok(card);  // Return 200 with the card data
     }
 }
