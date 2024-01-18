@@ -1,5 +1,6 @@
 using ApiCardEmotes;
 using Microsoft.AspNetCore.Cors.Infrastructure;
+using MongoDB.Driver; // Add this if you are using IMongoClient in UserRepository
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,8 +10,17 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Register MongoDB context
-builder.Services.AddSingleton<MongoDbContext>();  // This line registers MongoDbContext
-builder.Services.AddSingleton<CardService>();    // Assuming CardService uses MongoDbContext
+builder.Services.AddSingleton<MongoDbContext>(); // This line registers MongoDbContext
+builder.Services.AddSingleton<CardService>();   // Assuming CardService uses MongoDbContext
+
+builder.Services.AddSingleton<IMongoClient>(serviceProvider =>
+{
+    var settings = serviceProvider.GetRequiredService<IConfiguration>();
+    var connectionString = settings.GetConnectionString("MongoDb");
+    return new MongoClient(connectionString);
+});
+// Register UserRepository
+builder.Services.AddScoped<UserRepository>();   // Add this line to register UserRepository
 
 // Add CORS configuration
 builder.Services.AddCors(options =>

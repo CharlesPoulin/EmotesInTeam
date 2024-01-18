@@ -149,3 +149,14 @@ EmotesForTeam/obj/Debug/net6.0/compressed/uji5zuu4c3.gz
 EmotesForTeam/obj/Debug/net6.0/EmotesForTeam.AssemblyInfoInputs.cache
 *.cache
 EmotesForTeam/obj/Debug/net6.0/EmotesForTeam.assets.cache
+*.pdb
+ApiCardTeam/obj/Debug/net8.0/apphost.exe
+*.exe
+ApiCardTeam/bin/Debug/net8.0/ApiCardEmotes.dll
+ApiCardTeam/bin/Debug/net8.0/ApiCardEmotes.exe
+ApiCardTeam/bin/Debug/net8.0/ApiCardEmotes.pdb
+ApiCardTeam/obj/Debug/net8.0/ApiCardEmotes.assets.cache
+ApiCardTeam/obj/Debug/net8.0/ApiCardEmotes.csproj.AssemblyReference.cache
+ApiCardTeam/obj/Debug/net8.0/ApiCardEmotes.csproj.CoreCompileInputs.cache
+ApiCardTeam/obj/Debug/net8.0/ApiCardEmotes.pdb
+ApiCardTeam/obj/Debug/net8.0/apphost.exe

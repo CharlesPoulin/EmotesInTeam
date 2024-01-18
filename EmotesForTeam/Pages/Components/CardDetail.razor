@@ -14,7 +14,7 @@
                     <span class="text-black text-xl font-bold" style="font-family: 'Google Sans', sans-serif;">@cardViewModel.Card.Title</span>
                 </div>
             </div>
-            <button class="w-[569px] h-10 mt-4 bg-blue-600 rounded-[6.7px] font-bold text-white hover:bg-blue-700 active:scale-90 transition duration-150 ease-in-out flex justify-center items-center shadow">Quick Add</button>
+            <button onclick="AddCardToUserInventory()" class="w-[569px] h-10 mt-4 bg-blue-600 rounded-[6.7px] font-bold text-white hover:bg-blue-700 active:scale-90 transition duration-150 ease-in-out flex justify-center items-center shadow">Quick Add</button>
         </div>
     </div>
 
@@ -42,5 +42,15 @@ else
                 Card = card, // Assign the card to the ViewModel
             };
         }
+    }
+    
+    private async Task AddCardToUserInventory()
+    {
+        // Assuming you have a service method that adds the card to the user's inventory
+        // You will need to pass the user's ID and the card's ID
+        var userId = "userId"; // Get this from the user's context/session
+        await UserService.AddCardToUserInventory(userId, CardId);
+
+        // Optional: Show a notification or update UI
     }
 }

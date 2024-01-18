@@ -77,3 +77,6 @@ D:\GIT\EmotesInTeam\ApiCardTeam\obj\Debug\net8.0\ApiCardEmotes.pdb
 D:\GIT\EmotesInTeam\ApiCardTeam\obj\Debug\net8.0\ApiCardEmotes.genruntimeconfig.cache
 D:\GIT\EmotesInTeam\ApiCardTeam\obj\Debug\net8.0\ref\ApiCardEmotes.dll
 D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\global.json
+D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\ApiCardEmotes.staticwebassets.runtime.json
+D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\BCrypt.Net.dll
+D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\Newtonsoft.Json.dll
