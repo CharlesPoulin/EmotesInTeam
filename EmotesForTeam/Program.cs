@@ -4,6 +4,7 @@ using MudBlazor.Services;
 using EmotesForTeam;
 using EmotesForTeam.Services;
 using Blazored.LocalStorage;
+using EmotesForTeam.Pages.Service;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -15,6 +16,8 @@ builder.Services.AddScoped(sp => new HttpClient
 {
     BaseAddress = new Uri("http://localhost:5168/")
 });
+builder.Services.AddScoped<AuthenticationService>();
+
 builder.Services.AddMudServices();
 builder.Services.AddScoped<CardService>();
 

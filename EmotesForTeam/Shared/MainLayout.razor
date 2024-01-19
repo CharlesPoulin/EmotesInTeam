@@ -1,5 +1,6 @@
 ﻿@inherits LayoutComponentBase
-
+@using EmotesForTeam.Pages.Service
+@inject AuthenticationService AuthService
 <MudThemeProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
@@ -126,11 +127,11 @@
                                         <!-- Conditionally render "Sign in" or "Sign out" based on authentication status -->
                                         @if (IsLoggedIn)
                                         {
-                                            <NavLink href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</NavLink>
+                                            <NavLink href="logout" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</NavLink>
                                         }
                                         else
                                         {
-                                            <NavLink href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign in</NavLink>
+                                            <NavLink href="login" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign in</NavLink>
                                         }
                                     </div>
 
@@ -208,6 +209,7 @@
 </MudLayout>
 
 @code {
+    
     private bool isMenuOpen = false;
 
     private void ToggleMenu()
@@ -223,14 +225,10 @@
         _drawerOpen = !_drawerOpen;
     }
     
-    bool IsLoggedIn = false;
+    private bool IsLoggedIn;
 
     protected override async Task OnInitializedAsync()
     {
-        // Simulate a loading delay
-        await Task.Delay(1000);
-
-        // Simulate an authentication
-        IsLoggedIn = true; // Set IsLoggedIn to true if the authentication is successful
+        IsLoggedIn = await AuthService.IsUserLoggedIn();
     }
 }
