@@ -1,6 +1,8 @@
 ﻿@inherits LayoutComponentBase
 @using EmotesForTeam.Pages.Service
 @inject AuthenticationService AuthService
+@inject NavigationManager NavManager
+
 <MudThemeProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
@@ -127,7 +129,7 @@
                                         <!-- Conditionally render "Sign in" or "Sign out" based on authentication status -->
                                         @if (IsLoggedIn)
                                         {
-                                            <NavLink href="logout" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</NavLink>
+                                            <button @onclick="LogoutUser" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</button>
                                         }
                                         else
                                         {
@@ -230,5 +232,11 @@
     protected override async Task OnInitializedAsync()
     {
         IsLoggedIn = await AuthService.IsUserLoggedIn();
+    }
+    
+    private async Task LogoutUser()
+    {
+        await AuthService.Logout();
+        NavManager.NavigateTo("/");
     }
 }
