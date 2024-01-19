@@ -35,6 +35,11 @@
                 </p>
             </div>
         }
+         <div class="text-center mt-4">
+                    <button @onclick="NavigateToRegister" class="text-blue-600 hover:text-blue-800">
+                        Create an Account
+                    </button>
+                </div>
     </div>
 </div>
 
@@ -43,6 +48,9 @@
     private string password;
     private string loginResult;
     private string loginResultCssClass;
+
+    public bool IsLoggedIn;
+
 
     private async Task SubmitForm()
     {
@@ -57,5 +65,10 @@
             //todo connect endpoint to Display an error message
             Console.WriteLine("Error");
         }
+    }
+    
+    private void NavigateToRegister()
+    {
+        NavManager.NavigateTo("/register"); 
     }
 }

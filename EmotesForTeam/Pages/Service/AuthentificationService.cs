@@ -5,10 +5,12 @@ using Blazored.LocalStorage;
 
 namespace EmotesForTeam.Pages.Service
 {
+
     public class AuthenticationService
     {
         private readonly HttpClient _httpClient;
         private readonly ILocalStorageService _localStorage;
+        public event Action OnAuthenticationStateChanged;
 
         public AuthenticationService(HttpClient httpClient, ILocalStorageService localStorage)
         {
@@ -47,11 +49,35 @@ namespace EmotesForTeam.Pages.Service
         public async Task Logout()
         {
             await _localStorage.RemoveItemAsync("authToken");
+            OnAuthenticationStateChanged?.Invoke();
         }
 
-        public async Task<bool> IsUserLoggedIn()
+        public async Task<bool> IsLoggedIn()
         {
             return await _localStorage.GetItemAsync<string>("authToken") != null;
+        }
+
+        public async Task<bool> Register(string username, string email, string password)
+        {
+            var registerRequest = new { Username = username, Email = email, Password = password };
+
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync("/Users/register", registerRequest);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine($"Register failed with status code: {response.StatusCode} {response.ReasonPhrase}");
+                    return false;
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Register error: {ex.Message}");
+                return false;
+            }
         }
     }
 }

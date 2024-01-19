@@ -1,48 +1,74 @@
-﻿@* @page "/register" *@
-@* *@
-@* <h3>Register</h3> *@
-@* *@
-@* <form @onsubmit="SubmitForm"> *@
-@*     <div class="mb-3"> *@
-@*         <label for="username" class="form-label">Username</label> *@
-@*         <input type="text" class="form-control" id="username" @bind="username"> *@
-@*     </div> *@
-@*     <div class="mb-3"> *@
-@*         <label for="password" class="form-label">Password</label> *@
-@*         <input type="password" class="form-control" id="password" @bind="password"> *@
-@*     </div> *@
-@*     <button type="submit" class="btn btn-primary">Register</button> *@
-@* </form> *@
-@* *@
-@* @if (registrationResult != null) *@
-@* { *@
-@*     <div class="alert @registrationResultCssClass"> *@
-@*         @registrationResultMessage *@
-@*     </div> *@
-@* } *@
-@* *@
-@* @code { *@
-@*     private string username; *@
-@*     private string password; *@
-@*     private string registrationResult; *@
-@*     private string registrationResultCssClass; *@
-@* *@
-@*     private async Task SubmitForm() *@
-@*     { *@
-@*         // Send a request to your API's registration endpoint with the provided username and password. *@
-@*         // Handle the response accordingly. *@
-@*         // For simplicity, you can simulate a successful registration for demonstration purposes. *@
-@* *@
-@*         // Simulate a successful registration *@
-@*         if (username == "demo" && password == "password") *@
-@*         { *@
-@*             registrationResult = "Registration successful!"; *@
-@*             registrationResultCssClass = "alert-success"; *@
-@*         } *@
-@*         else *@
-@*         { *@
-@*             registrationResult = "Registration failed. Please try again."; *@
-@*             registrationResultCssClass = "alert-danger"; *@
-@*         } *@
-@*     } *@
-@* } *@
+﻿@page "/register"
+@inject NavigationManager NavManager
+@using EmotesForTeam.Pages.Service
+@inject AuthenticationService AuthService
+
+<div class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="w-full max-w-xs">
+        <form @onsubmit="SubmitForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
+                <input @bind="username" id="username" type="text" placeholder="Username" 
+                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                <input @bind="email" id="email" type="email" placeholder="Email" 
+                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                <input @bind="password" id="password" type="password" placeholder="Password" 
+                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Register
+                </button>
+            </div>
+        </form>
+        @if (registerResult != null)
+        {
+            <div class="text-center py-4">
+                <p class="text-sm @(registerResultCssClass)">
+                    @registerResult
+                </p>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private string username;
+    private string email;
+    private string password;
+    private string registerResult;
+    private string registerResultCssClass;
+
+    private async Task SubmitForm()
+    {
+        // Implement your registration logic here
+        var registrationResult = await AuthService.Register(username, email, password);
+        if (registrationResult)
+        {
+            // If registration is successful, log the user in immediately
+            var loginResult = await AuthService.Login(username, password);
+            if (loginResult)
+            {
+                // Navigate to homepage or dashboard after successful login
+                NavManager.NavigateTo("/"); 
+            }
+            else
+            {
+                // Handle failed login after registration (unlikely but possible)
+                registerResult = "Automatic login failed. Please log in manually.";
+                registerResultCssClass = "text-red-600";
+            }
+        }
+        else
+        {
+            registerResult = "Registration failed. Please try again.";
+            registerResultCssClass = "text-red-600";
+        }
+    }
+}

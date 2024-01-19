@@ -125,18 +125,18 @@
                                         <!-- Active: "bg-gray-100", Not Active: "" -->
                                         <NavLink href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</NavLink>
                                         <NavLink href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</NavLink>
-    
+                                
                                         <!-- Conditionally render "Sign in" or "Sign out" based on authentication status -->
-                                        @if (IsLoggedIn)
+                                        @if (isLoggedIn)
                                         {
                                             <button @onclick="LogoutUser" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</button>
+                                            
                                         }
                                         else
                                         {
-                                            <NavLink href="login" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign in</NavLink>
+                                            <NavLink href="login" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2" @onclick="ToggleMenu">Sign in</NavLink>
                                         }
                                     </div>
-
                                 }
                             </div>
                         </div>
@@ -211,12 +211,30 @@
 </MudLayout>
 
 @code {
-    
     private bool isMenuOpen = false;
+    private bool isLoggedIn;
+
+    protected override async Task OnInitializedAsync()
+    {
+        AuthService.OnAuthenticationStateChanged += async () => 
+        {
+            await InvokeAsync(async () =>
+            {
+                await UpdateLoginStatus();
+                StateHasChanged();
+            });
+        };
+
+        await UpdateLoginStatus();
+    }
+
+    private async Task UpdateLoginStatus()
+    {
+        isLoggedIn = await AuthService.IsLoggedIn();
+    }
 
     private void ToggleMenu()
     {
-        // Toggle the menu open/close state
         isMenuOpen = !isMenuOpen;
     }
 
@@ -226,17 +244,11 @@
     {
         _drawerOpen = !_drawerOpen;
     }
-    
-    private bool IsLoggedIn;
 
-    protected override async Task OnInitializedAsync()
-    {
-        IsLoggedIn = await AuthService.IsUserLoggedIn();
-    }
-    
     private async Task LogoutUser()
     {
         await AuthService.Logout();
-        NavManager.NavigateTo("/");
+        // Optionally, force a state update after logging out
+        await UpdateLoginStatus();
     }
 }
