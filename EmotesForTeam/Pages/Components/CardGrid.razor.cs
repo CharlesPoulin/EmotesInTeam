@@ -1,9 +1,9 @@
-﻿using EmotesForTeam.Model;
+﻿using System.Net.Http.Json;
+using EmotesForTeam.Model;
 using EmotesForTeam.Services;
 using Microsoft.AspNetCore.Components;
 using Blazored.LocalStorage;
 using EmotesForTeam.Pages.Service;
-
 namespace EmotesForTeam.Pages.Components
 {
     public partial class CardGridBase : ComponentBase
@@ -13,13 +13,17 @@ namespace EmotesForTeam.Pages.Components
         [Inject]
         public ILocalStorageService? LocalStorage { get; set; }
         [Inject]
-        public AuthenticationService AuthenticationService { get; set; } // Inject the AuthenticationService
+        public AuthenticationService AuthenticationService { get; set; }
         [Inject]
         public NavigationManager NavigationManager { get; set; }
+        [Inject]
+        public HttpClient HttpClient { get; set; }
 
         public List<Card>? cards;
         public List<CardViewModel> cardViewModels;
         private string currentUserId;
+        private List<string> userCardInventory;
+
 
         private const int PageSize = 30;
         public int CurrentPage { get; set; } = 1;
@@ -27,6 +31,7 @@ namespace EmotesForTeam.Pages.Components
         protected override async Task OnInitializedAsync()
         {
             currentUserId = await LocalStorage.GetItemAsync<string>("userId");
+            userCardInventory = await GetUserCardInventory(); // Fetch the user's card inventory
             await LoadCards();
         }
 
@@ -35,7 +40,12 @@ namespace EmotesForTeam.Pages.Components
             if (CardService != null)
             {
                 cards = await CardService.GetCardsAsync(CurrentPage, PageSize);
-                cardViewModels = cards.Select(card => new CardViewModel { Card = card }).ToList();
+                cardViewModels = cards.Select(card => 
+                    new CardViewModel 
+                    { 
+                        Card = card,
+                        isAdded = userCardInventory.Contains(card.Id) // Set based on the user's inventory
+                    }).ToList();
             }
         }
         
@@ -71,16 +81,46 @@ namespace EmotesForTeam.Pages.Components
                 return;
             }
 
-            var response = await AuthenticationService.AddCardToUser(currentUserId, cardViewModel.Card.Id);
-            if (response.IsSuccessStatusCode)
+            if (!cardViewModel.isAdded)
             {
-                cardViewModel.isAdded = true; 
+                var response = await AuthenticationService.AddCardToUser(currentUserId, cardViewModel.Card.Id);
+                if (response.IsSuccessStatusCode)
+                {
+                    cardViewModel.isAdded = true;
+                    // Optionally, add the cardId to userCardInventory list
+                    userCardInventory.Add(cardViewModel.Card.Id);
+                }
+                else
+                {
+                    Console.WriteLine("Failed to add card: " + response.StatusCode);
+                }
             }
-            else
-            {
-                Console.WriteLine("Failed to add card: " + response.StatusCode);
-            }
-            
         }
+        
+        private async Task<List<string>> GetUserCardInventory()
+        {
+            try
+            {
+                // Correctly use the injected httpClient here
+                var response = await HttpClient.GetAsync($"/api/Users/{currentUserId}/cards");
+        
+                if (response.IsSuccessStatusCode)
+                {
+                    var userCards = await response.Content.ReadFromJsonAsync<List<string>>();
+                    return userCards ?? new List<string>();
+                }
+                else
+                {
+                    Console.WriteLine($"Failed to fetch card inventory: {response.StatusCode}");
+                    return new List<string>();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception in fetching card inventory: {ex.Message}");
+                return new List<string>();
+            }
+        }
+
     }
 }

@@ -116,6 +116,33 @@ public class UsersController : ControllerBase
         _userRepository.AddCardToUser(request.UserId, request.CardId);
         return Ok();
     }
+    
+    [HttpGet("{userId}/cards")]
+    public ActionResult<List<string>> GetUserCards(string userId)
+    {
+        if (string.IsNullOrWhiteSpace(userId))
+        {
+            return BadRequest("UserId is required.");
+        }
+
+        try
+        {
+            var userCards = _userRepository.GetUserCards(userId);
+            if (userCards != null)
+            {
+                return Ok(userCards);
+            }
+            else
+            {
+                return NotFound($"No cards found for user with Id: {userId}");
+            }
+        }
+        catch (Exception ex)
+        {
+            // Log the exception
+            return StatusCode(500, "An error occurred while processing your request.");
+        }
+    }
     private string SomeHashingFunction(string password)
     {
         return BCrypt.Net.BCrypt.HashPassword(password);

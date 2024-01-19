@@ -47,8 +47,20 @@ public class UserRepository
         }
     }
 
+    public List<string> GetUserCards(string userId)
+    {
+        var filter = Builders<ApplicationUser>.Filter.Eq(u => u.Id, userId);
+        var user = _usersCollection.Find(filter).FirstOrDefault();
 
-
-
+        if (user != null && user.CardInventoryIds != null)
+        {
+            // Convert ObjectId to string
+            return user.CardInventoryIds.Select(id => id.ToString()).ToList();
+        }
+        else
+        {
+            return new List<string>(); // Return an empty list if no cards or user not found
+        }
+    }
 
 }
