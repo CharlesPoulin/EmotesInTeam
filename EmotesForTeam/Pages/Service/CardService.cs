@@ -47,7 +47,6 @@ namespace EmotesForTeam.Services
         {
             try
             {
-                // Replace with your actual API endpoint
                 var response = await _httpClient.GetAsync($"api/Cards/{cardId}");
 
                 if (response.IsSuccessStatusCode)
@@ -57,16 +56,14 @@ namespace EmotesForTeam.Services
                 }
                 else
                 {
-                    // Handle non-success status code. Log it, or throw an exception as needed.
                     Console.WriteLine($"API call failed: {response.StatusCode}");
-                    return null; // or handle as needed
+                    return null;
                 }
             }
             catch (HttpRequestException ex)
             {
-                // Handle HttpRequestException. Log it, or throw an exception as needed.
                 Console.WriteLine($"Exception during API call: {ex.Message}");
-                return null; // or handle as needed
+                return null;
             }
 
         }

@@ -9,23 +9,30 @@
     <div class="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-100 gap-y-4">
         @foreach (var cardViewModel in cardViewModels)
         {   
-            <div @onclick="@(() => NavigateToCardDetail(cardViewModel.Card.Id))" class="w-[202px] h-[259px] relative bg-white rounded-[6.7px] shadow-xl cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl">
-                <button style="cursor: pointer; position: absolute; right: 10px; top: 10px; z-index: 1;" @onclick="() => ToggleFavorite(cardViewModel)">
-                    <img src="@GetHeartImageUrl(cardViewModel.IsFavorite)" alt="Heart" />
-                </button>
-                <button @onclick="@(() => QuickAddCard(cardViewModel.Card.Id))" class="w-[77px] h-7 left-[110px] top-[207px] absolute bg-blue-600 rounded-[6.7px] font-bold text-white hover:bg-blue-700 active:scale-90 transition duration-150 ease-in-out transform flex justify-center items-center">
+            <div class="w-[202px] h-[259px] relative bg-white rounded-[6.7px] shadow-xl cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl">
+
+                <!-- Quick Add Button -->
+                <button @onclick="@(() => QuickAddCard(cardViewModel))"
+                        class="@(cardViewModel.isAdded ? "bg-green-600" : "bg-blue-600") w-[77px] h-7 left-[110px] top-[207px] absolute rounded-[6.7px] font-bold text-white hover:bg-blue-700 active:scale-90 transition duration-150 ease-in-out transform flex justify-center items-center z-10">
                     Quick Add
                 </button>
-                <button class="w-[77px] h-7 left-[16px] top-[207px] absolute bg-indigo-900 rounded-[13.4px] text-white text-xs font-medium flex justify-center items-center">
+
+                <!-- Manage List Button -->
+                <button class="w-[77px] h-7 left-[16px] top-[207px] absolute bg-indigo-900 rounded-[13.4px] text-white text-xs font-medium flex justify-center items-center z-10">
                     Manage List
                 </button>
-                <div class="absolute top-[172px] w-full flex justify-center">
-                    <p class="text-blue-600 font-medium">@cardViewModel.Card.Title</p>
-                </div>
-                <div class="w-[200px] h-[200px] absolute flex justify-center items-center">
-                    <img src="@cardViewModel.Card.ImageUrl" alt="@cardViewModel.Card.Title" class="self-center max-w-auto h-auto" />
+
+                <!-- Card Content Clickable Area -->
+                <div @onclick="@(() => NavigateToCardDetail(cardViewModel.Card.Id))" class="z-0">
+                    <div class="absolute top-[172px] w-full flex justify-center">
+                        <p class="text-blue-600 font-medium">@cardViewModel.Card.Title</p>
+                    </div>
+                    <div class="w-[200px] h-[200px] absolute flex justify-center items-center">
+                        <img src="@cardViewModel.Card.ImageUrl" alt="@cardViewModel.Card.Title" class="self-center max-w-auto h-auto" />
+                    </div>
                 </div>
             </div>
+
         }
     </div>
 }

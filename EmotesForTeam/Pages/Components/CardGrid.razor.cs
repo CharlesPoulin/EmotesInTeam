@@ -28,7 +28,6 @@ namespace EmotesForTeam.Pages.Components
         {
             currentUserId = await LocalStorage.GetItemAsync<string>("userId");
             await LoadCards();
-            await LoadFavorites();
         }
 
         public async Task LoadCards()
@@ -63,34 +62,8 @@ namespace EmotesForTeam.Pages.Components
         public bool IsFirstPage => CurrentPage <= 1;
         public bool IsLastPage => cards != null && cards.Count < PageSize;
 
-        public async Task ToggleFavorite(CardViewModel cardViewModel)
-        {
-            cardViewModel.IsFavorite = !cardViewModel.IsFavorite;
-            await LocalStorage.SetItemAsync("favorites", cardViewModels);
-        }
 
-        public async Task LoadFavorites()
-        {
-            var storedFavorites = await LocalStorage.GetItemAsync<List<CardViewModel>>("favorites");
-            if (storedFavorites != null)
-            {
-                foreach (var cardViewModel in cardViewModels)
-                {
-                    var storedFavorite = storedFavorites.FirstOrDefault(c => c.Card.Id == cardViewModel.Card.Id);
-                    if (storedFavorite != null)
-                    {
-                        cardViewModel.IsFavorite = storedFavorite.IsFavorite;
-                    }
-                }
-            }
-        }
-
-        public string GetHeartImageUrl(bool isFavorite)
-        {
-            return isFavorite ? "/Images/svg/heart-full.svg" : "/Images/svg/heart-empty.svg";
-        }
-        
-        public async Task QuickAddCard(string cardId)
+        public async Task QuickAddCard(CardViewModel cardViewModel)
         {
             if (AuthenticationService == null)
             {
@@ -98,16 +71,16 @@ namespace EmotesForTeam.Pages.Components
                 return;
             }
 
-            var response = await AuthenticationService.AddCardToUser(currentUserId, cardId);
-            Console.WriteLine("cardid " + currentUserId + " " + cardId);
+            var response = await AuthenticationService.AddCardToUser(currentUserId, cardViewModel.Card.Id);
             if (response.IsSuccessStatusCode)
             {
-                Console.WriteLine("Card added successfully.");
+                cardViewModel.isAdded = true; 
             }
             else
             {
                 Console.WriteLine("Failed to add card: " + response.StatusCode);
             }
+            
         }
     }
 }
