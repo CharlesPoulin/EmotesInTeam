@@ -3,9 +3,6 @@ using EmotesForTeam.Services;
 using Microsoft.AspNetCore.Components;
 using Blazored.LocalStorage;
 
-
-using System.Linq;
-
 namespace EmotesForTeam.Pages.Components
 {
     public partial class CardGridBase : ComponentBase
@@ -20,12 +17,14 @@ namespace EmotesForTeam.Pages.Components
 
         public List<Card>? cards;
         public List<CardViewModel> cardViewModels;
+        private string currentUserId;
 
         private const int PageSize = 30;
         public int CurrentPage { get; set; } = 1;
 
         protected override async Task OnInitializedAsync()
         {
+            currentUserId = await LocalStorage.GetItemAsync<string>("userId");
             await LoadCards();
             await LoadFavorites();
         }
@@ -87,6 +86,25 @@ namespace EmotesForTeam.Pages.Components
         public string GetHeartImageUrl(bool isFavorite)
         {
             return isFavorite ? "/Images/svg/heart-full.svg" : "/Images/svg/heart-empty.svg";
+        }
+        
+        public async Task QuickAddCard(string cardId)
+        {
+            if (CardService == null)
+            {
+                Console.WriteLine("CardService is not available.");
+                return;
+            }
+
+            var response = await CardService.AddCardToUser(currentUserId, cardId);
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("Card added successfully.");
+            }
+            else
+            {
+                Console.WriteLine("Failed to add card.");
+            }
         }
     }
 }

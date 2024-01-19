@@ -14,6 +14,17 @@ public class CardsController : ControllerBase
         _cardService = cardService;
     }
 
+    
+    // public async Task<HttpResponseMessage> RemoveCardFromUser(string userId, string cardId)
+    // {
+    //     // Construct the URL with the userId in the path and cardId as a query parameter
+    //     var url = $"api/Users/{userId}/removecard?cardId={cardId}";
+    //
+    //     // Send a POST request to the constructed URL
+    //     var response = await _httpClient.PostAsync(url, null); // null indicates no content in the body of the request
+    //     return response;
+    // }
+
     // Update this method to include pagination
     [HttpGet]
     public async Task<ActionResult<List<Card>>> GetAllCards([FromQuery] int page = 1, [FromQuery] int pageSize = 30)

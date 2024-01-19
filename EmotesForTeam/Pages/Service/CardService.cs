@@ -71,5 +71,11 @@ namespace EmotesForTeam.Services
 
         }
         
+        public async Task<HttpResponseMessage> AddCardToUser(string userId, string cardId)
+        {
+            var url = $"api/Users/{userId}/addcard?cardId={cardId}";
+            return await _httpClient.PostAsync(url, null);
+        }
+        
     }
 }
