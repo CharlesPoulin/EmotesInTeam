@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[8.0.1, )"
             },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.9.0-release-23619-01, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.5, )"
@@ -60,6 +64,18 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.23.1, )"
+            },
+            "SpecFlow": {
+              "target": "Package",
+              "version": "[4.0.31-beta, )"
+            },
+            "SpecFlow.Tools.MsBuild.Generation": {
+              "target": "Package",
+              "version": "[4.0.31-beta, )"
+            },
+            "SpecFlow.xUnit": {
+              "target": "Package",
+              "version": "[4.0.31-beta, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

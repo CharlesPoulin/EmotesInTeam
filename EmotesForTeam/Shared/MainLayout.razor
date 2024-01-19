@@ -122,8 +122,18 @@
                                         <!-- Active: "bg-gray-100", Not Active: "" -->
                                         <NavLink href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</NavLink>
                                         <NavLink href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</NavLink>
-                                        <NavLink href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</NavLink>
+    
+                                        <!-- Conditionally render "Sign in" or "Sign out" based on authentication status -->
+                                        @if (IsLoggedIn)
+                                        {
+                                            <NavLink href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</NavLink>
+                                        }
+                                        else
+                                        {
+                                            <NavLink href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign in</NavLink>
+                                        }
                                     </div>
+
                                 }
                             </div>
                         </div>
@@ -211,5 +221,16 @@
     void DrawerToggle()
     {
         _drawerOpen = !_drawerOpen;
+    }
+    
+    bool IsLoggedIn = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Simulate a loading delay
+        await Task.Delay(1000);
+
+        // Simulate an authentication
+        IsLoggedIn = true; // Set IsLoggedIn to true if the authentication is successful
     }
 }
