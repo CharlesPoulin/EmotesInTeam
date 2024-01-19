@@ -17,6 +17,12 @@ namespace EmotesForTeam.Pages.Service
             _httpClient = httpClient;
             _localStorage = localStorage;
         }
+        
+        public class LoginResponse
+        {
+            public string Token { get; set; }
+            public string UserId { get; set; }
+        }
 
         public async Task<bool> Login(string username, string password)
         {
@@ -32,10 +38,15 @@ namespace EmotesForTeam.Pages.Service
                     return false;
                 }
 
-                var token = await response.Content.ReadAsStringAsync();
-                await _localStorage.SetItemAsync("authToken", token);
+                var loginResponse = await response.Content.ReadFromJsonAsync<LoginResponse>();
+                if (loginResponse != null)
+                {
+                    await _localStorage.SetItemAsync("authToken", loginResponse.Token);
+                    await _localStorage.SetItemAsync("userId", loginResponse.UserId);
+                    return true;
+                }
 
-                return true;
+                return false;
             }
             catch (Exception ex)
             {
@@ -43,7 +54,6 @@ namespace EmotesForTeam.Pages.Service
                 return false;
             }
         }
-
 
 
         public async Task Logout()
@@ -79,5 +89,31 @@ namespace EmotesForTeam.Pages.Service
                 return false;
             }
         }
+        
+        public async Task<HttpResponseMessage> AddCardToUser(string userId, string cardId)
+        {
+            var url = $"/Users/addcard";
+
+            var payload = new { cardId = cardId, userId = userId };
+
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync(url, payload);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine($"Error adding card: {response.StatusCode} - {await response.Content.ReadAsStringAsync()}");
+                }
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception in AddCardToUser: {ex.Message}");
+                return null;
+            }
+        }
+
+
     }
 }

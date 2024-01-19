@@ -2,6 +2,7 @@
 using EmotesForTeam.Services;
 using Microsoft.AspNetCore.Components;
 using Blazored.LocalStorage;
+using EmotesForTeam.Pages.Service;
 
 namespace EmotesForTeam.Pages.Components
 {
@@ -10,8 +11,9 @@ namespace EmotesForTeam.Pages.Components
         [Inject]
         public CardService? CardService { get; set; }
         [Inject]
-        public ILocalStorageService LocalStorage { get; set; }
-        
+        public ILocalStorageService? LocalStorage { get; set; }
+        [Inject]
+        public AuthenticationService AuthenticationService { get; set; } // Inject the AuthenticationService
         [Inject]
         public NavigationManager NavigationManager { get; set; }
 
@@ -90,20 +92,21 @@ namespace EmotesForTeam.Pages.Components
         
         public async Task QuickAddCard(string cardId)
         {
-            if (CardService == null)
+            if (AuthenticationService == null)
             {
-                Console.WriteLine("CardService is not available.");
+                Console.WriteLine("AuthenticationService is not available.");
                 return;
             }
 
-            var response = await CardService.AddCardToUser(currentUserId, cardId);
+            var response = await AuthenticationService.AddCardToUser(currentUserId, cardId);
+            Console.WriteLine("cardid " + currentUserId + " " + cardId);
             if (response.IsSuccessStatusCode)
             {
                 Console.WriteLine("Card added successfully.");
             }
             else
             {
-                Console.WriteLine("Failed to add card.");
+                Console.WriteLine("Failed to add card: " + response.StatusCode);
             }
         }
     }

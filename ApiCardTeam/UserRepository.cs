@@ -31,7 +31,24 @@ public class UserRepository
     public void AddCardToUser(string userId, string cardId)
     {
         var filter = Builders<ApplicationUser>.Filter.Eq(u => u.Id, userId);
-        var update = Builders<ApplicationUser>.Update.AddToSet(u => u.CardInventoryIds, cardId);
-        _usersCollection.UpdateOne(filter, update);
+
+        var user = _usersCollection.Find(filter).FirstOrDefault();
+        if (user != null && user.CardInventoryIds == null)
+        {
+            // If the array is null, initialize it with the cardId
+            var initArrayUpdate = Builders<ApplicationUser>.Update.Set(u => u.CardInventoryIds, new List<string> { cardId });
+            _usersCollection.UpdateOne(filter, initArrayUpdate);
+        }
+        else
+        {
+            // If the array exists, use AddToSet to add the cardId
+            var addToSetUpdate = Builders<ApplicationUser>.Update.AddToSet(u => u.CardInventoryIds, cardId);
+            _usersCollection.UpdateOne(filter, addToSetUpdate);
+        }
     }
+
+
+
+
+
 }

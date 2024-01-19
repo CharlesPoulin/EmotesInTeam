@@ -65,7 +65,8 @@ public class UsersController : ControllerBase
         {
             UserName = request.Username,
             Email = request.Email,
-            Password = hashedPassword
+            Password = hashedPassword,
+            CardInventoryIds = new List<string>()
         };
 
         _userRepository.AddUser(user);
@@ -95,14 +96,24 @@ public class UsersController : ControllerBase
 
         // Generate JWT token
         var token = GenerateJwtToken(user);
-        return Ok(new { Token = token });
+        return Ok(new { Token = token, UserId = user.Id });
     }
 
-
-    [HttpPost("{userId}/addcard")]
-    public ActionResult AddCardToUser(string userId, string cardId)
+    public class AddCardRequest
     {
-        _userRepository.AddCardToUser(userId, cardId);
+        public string UserId { get; set; }
+        public string CardId { get; set; }
+    }
+
+    [HttpPost("addcard")]
+    public ActionResult AddCardToUser([FromBody] AddCardRequest request)
+    {
+        if (string.IsNullOrWhiteSpace(request.UserId) || string.IsNullOrWhiteSpace(request.CardId))
+        {
+            return BadRequest("UserId and CardId are required.");
+        }
+
+        _userRepository.AddCardToUser(request.UserId, request.CardId);
         return Ok();
     }
     private string SomeHashingFunction(string password)
