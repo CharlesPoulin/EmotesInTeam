@@ -80,3 +80,11 @@ D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\global.json
 D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\ApiCardEmotes.staticwebassets.runtime.json
 D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\BCrypt.Net.dll
 D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\GIT\EmotesInTeam\ApiCardTeam\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
