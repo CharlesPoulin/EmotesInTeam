@@ -20,7 +20,7 @@ module.exports = {
                 'violet-200': '#D6DAFF',
                 'red-500': '#E35B3D',
                 'rose-500': '#FF2A77',
-                'orange-100': '#ffedd5',
+                'orange-100': '#fccfa6',
                 neutral: {
                     100: '#f5f5f5',
                 },
