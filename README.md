@@ -1,5 +1,5 @@
 # Custom Emote and GIF Integration App for Teams
-
+[Latest Demo Video](https://www.loom.com/share/81f917d6bbf04305aa19e8a6c3f9e7ec)
 ## Overview
 This application is designed to enhance team communication on platforms like Teams, Slack, and Discord by allowing users to add and use custom emotes and GIFs. It's inspired by the functionality of 7TV and tailored to meet the needs of diverse team environments.
 
